@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer is used to define new styles, while @apply is used to reuse existing styles. */
+
+@layer utilities {
+
+    /* --------- HOME PAGE -------- */
+    .text-shadow-header {
+        text-shadow: 1px 1px 2px rgba(38, 37, 37, 0.811);
+    }
+
+    .button-shake:hover {
+        animation: shake 0.5s;
+    }
+
+    .slide-left {
+        transform: translateX(-150%);
+    }
+
+    .slide-right {
+        transform: translateX(50%);
+    }
+
+    .btn-whats-bulgarian-cuisine {
+        animation: pulse 1.25s infinite;
+        /* downside as home page will render infinitely */
+
+    }
+
+    .btn-whats-bulgarian-cuisine:hover {
+        background-image: linear-gradient(to bottom, #ffffff 0%, #03c051 41%, #d63016 85%);
+        text-shadow: 1px 1px 1px rgb(82, 80, 80);
+        animation: none
+    }
+
+    #contact {
+        scroll-margin-top: 100px;
+        /* adjust this value to your needs */
+    }
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(10);
+    }
+
+    20% {
+        transform: translate(-5px, 0);
+    }
+
+    40% {
+        transform: translate(5px, 0);
+    }
+
+    60% {
+        transform: translate(-5px, 0);
+    }
+
+    80% {
+        transform: translate(5px, 0);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.95);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    90% {
+        transform: scale(0.97);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
