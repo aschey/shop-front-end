@@ -18,7 +18,6 @@ const RouteSwitch = () => {
       <Routes>
         <Route path="/home" element={<App />} />
         <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/index.html" element={<Navigate replace to="/home" />} />
         {/* <Route path="/profile" element={<SignIn />} /> */}
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
