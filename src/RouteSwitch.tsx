@@ -7,6 +7,7 @@ import App from "./App";
 import Checkout from "./components/checkout/Checkout";
 import ScrollToTopOnMount from "./utilities/scrolltop";
 import About from "./components/About";
+import Redirect from "./components/utility-components/redirect";
 
 const RouteSwitch = () => {
   return (
@@ -16,9 +17,9 @@ const RouteSwitch = () => {
       <Navbar />
 
       <Routes>
+        <Route path="/*" element={<Redirect />} />
         <Route path="/home" element={<App />} />
         <Route path="/" element={<Navigate replace to="/home" />} />
-        {/* <Route path="/profile" element={<SignIn />} /> */}
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />
