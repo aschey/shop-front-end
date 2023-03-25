@@ -83,7 +83,9 @@ export default function ItemDetail({
         </div>
       </a>
 
-      <div className={`${flexClass1} h-full flex-col justify-between p-5`}>
+      <div
+        className={`${flexClass1} block h-full flex-col justify-between p-8 sm:pb-28`}
+      >
         <div className={`${flexClass2} flex justify-between`}>
           <h3 className=" text-xl font-bold tracking-tight text-gray-900 dark:text-white">
             <a href="#">{itemName}</a>

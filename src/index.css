@@ -35,9 +35,33 @@
         animation: none
     }
 
+    /* .about-bulgaria-img:hover {
+        transform: scale(1.1);
+    } */
+
     #contact {
         scroll-margin-top: 100px;
         /* adjust this value to your needs */
+    }
+
+    @media (max-width: 600px) {
+        #bio .grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        #bio img {
+            height: 40vh;
+            margin: auto;
+        }
+
+        #bio .col-span-1:first-child {
+            order: 2;
+        }
+
+        #bio .col-span-1:last-child {
+            order: 1;
+        }
     }
 
 }

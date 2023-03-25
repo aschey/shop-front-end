@@ -85,12 +85,12 @@ export function Home() {
                   </svg>
                 </button>
               </Link>
-              <a
-                href="#"
+              <Link
+                to="/about-bulgaria"
                 className="btn-whats-bulgarian-cuisine inline-flex min-w-[150px] items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-gray-100 dark:border-gray-700  dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800 sm:w-3/4 lg:w-2/4"
               >
                 What Is Bulgarian Cuisine?
-              </a>
+              </Link>
             </div>
           </div>
           {/* --------------- slideshow on hero gallery on food START------------*/}
