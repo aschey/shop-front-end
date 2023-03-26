@@ -1,7 +1,12 @@
 import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../contexts/product/ProductContextProvider";
-import { BioGeorgi, taglineGeorgi } from "../utilities/about-text";
+import {
+  aboutChef,
+  aboutChefImage,
+  BioGeorgi,
+  taglineGeorgi,
+} from "../utilities/about-chef";
 
 const About = () => {
   const { products, addProduct } = useContext(ProductContext);
@@ -42,19 +47,11 @@ const About = () => {
           </div>
           <img
             className="col-span-1 m-auto grid-cols-4 lg:max-h-[70vh]"
-            src="src/utilities/chef-image.jpg"
-            alt="Masterchef Georgi Image"
+            src={aboutChefImage[0]}
+            alt="Masterchef Georgi"
           />
         </div>
       </section>
-      {/* <section className="w-full bg-secondary-50 dark:bg-gray-900">
-        <Link
-          to="/about-bulgaria"
-          className="btn-whats-bulgarian-cuisine inline-flex min-w-[150px] items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-gray-100 dark:border-gray-700  dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800 sm:w-3/4 lg:w-2/4"
-        >
-          Learn About Bulgarian Cuisine
-        </Link>
-      </section> */}
     </>
   );
 };

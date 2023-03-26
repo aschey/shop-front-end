@@ -1,4 +1,5 @@
-import { WhatIsBulgarianCuisine } from "../utilities/about-text";
+import { aboutBulgariaImages } from "../utilities/about-bulgaria";
+import { WhatIsBulgarianCuisine } from "../utilities/about-chef";
 const AboutBulgaria = () => {
   return (
     <>
@@ -20,28 +21,22 @@ const AboutBulgaria = () => {
             <WhatIsBulgarianCuisine />
           </div>
           <div className="col-span-1 mx-auto grid-cols-4 lg:max-h-[70vh]">
-            <img
-              className="about-bulgaria-img mx-14 my-12 lg:max-h-[40vh]"
-              src="src/utilities/AboutBulgaria2.jpg"
-              alt="Bulgarian Food"
-            />
-            <img
-              className="about-bulgaria-img my-12 lg:max-h-[40vh]"
-              src="src/utilities/AboutBulgaria3.jpg"
-              alt="Bulgarian Food"
-            />
-            <img
-              className="about-bulgaria-img mx-24 my-12 lg:max-h-[40vh]"
-              src="src/utilities/AboutBulgaria4.jpg"
-              alt="Bulgarian Food"
-            />
+            {aboutBulgariaImages.slice(1).map((imageUrl) => {
+              return (
+                <img
+                  src={imageUrl}
+                  className="about-bulgaria-img mx-14 my-12 lg:max-h-[40vh]"
+                  alt="Bulgarian Food Scene"
+                />
+              );
+            })}
           </div>
         </div>
         <div className="mx-auto grid w-full max-w-screen-xl py-10">
           <img
             className="about-bulgaria-img w-100 col-span-1 m-auto grid-cols-4 items-stretch"
-            src="src/utilities/AboutBulgaria1.jpg"
-            alt="Nessebar Image"
+            src={aboutBulgariaImages[0]}
+            alt="Nessebar Seaside Dining"
           />
         </div>
       </section>

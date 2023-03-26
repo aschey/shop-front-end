@@ -1,4 +1,4 @@
-//static list
+//static list for testing only
 export const products = [
   {
     id: "pd-th1",
