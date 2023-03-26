@@ -60,9 +60,6 @@ export default function ItemDetail({
     }
   };
 
-  //   console.log(itemName + "isInCart: " + isInCart(product));
-  //   console.log(currentCartItemQty(product));
-
   return (
     <div
       className={`data-id=${id} relative items-center rounded-lg bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-800 ${cardClass}`}
@@ -70,9 +67,11 @@ export default function ItemDetail({
       <a className={`${aTagClass} md:relative md:inline-block`}>
         <img
           // className="w-full rounded-lg sm:rounded-lg"
-          className="w-full rounded-t-lg object-cover sm:rounded-lg"
-          src="https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/50/17/43/picTV5Zcz.jpg"
-          //   src={`https://example.com/${imageId}.jpg`}
+          className="rounded-t-lg object-fill sm:h-[24rem] sm:w-full sm:rounded-lg md:h-[13rem] md:w-[18rem]"
+          src={
+            imageId[0] ||
+            "https://a-z-animals.com/media/2022/12/shutterstock_583277200.jpg"
+          }
           alt={itemName}
         />
 
