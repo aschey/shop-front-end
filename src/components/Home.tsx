@@ -69,7 +69,7 @@ export function Home() {
             </p>
             <div className="flex w-full gap-5">
               <Link to="/shop">
-                <button className="button-shake inline-flex min-w-[120px] items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-base font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 sm:w-1/4">
+                <button className="button-shake inline-flex min-w-[120px] items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-base font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 sm:h-auto sm:w-1/4">
                   Shop
                   <svg
                     className="ml-2 -mr-1 h-5 w-5"
