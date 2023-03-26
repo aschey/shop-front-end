@@ -2,7 +2,6 @@ import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../contexts/product/ProductContextProvider";
 import {
-  aboutChef,
   aboutChefImage,
   BioGeorgi,
   taglineGeorgi,
