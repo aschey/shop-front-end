@@ -5,18 +5,6 @@ module.exports = {
     "./node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    screens: {
-      sm: "320px",
-      // => @media (min-width: 576px) { ... }
-
-      // md: "760px",
-      // // => @media (min-width: 960px) { ... }
-
-      // lg: "992px",
-      // // => @media (min-width: 1440px) { ... }
-
-      // xl: "1200px",
-    },
     extend: {
       colors: {
         primary: {
@@ -43,6 +31,9 @@ module.exports = {
           800: "#0f641f",
           900: "#0b4e17",
         },
+      },
+      screens: {
+        sm: "320px",
       },
     },
   },
