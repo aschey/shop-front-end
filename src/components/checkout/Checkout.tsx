@@ -1,16 +1,13 @@
-// import { products } from "../utilities/product-list";
-
 import { useState, useContext, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import CartContext from "../../contexts/cart/CartContext";
-import { ProductContext } from "../../contexts/product/ProductContextProvider";
 
 enum CheckoutStatus {
   Success = "success",
   Cancel = "cancel",
 }
 const Checkout = () => {
-  const { cartItems, clearCart } = useContext(CartContext);
+  const { clearCart } = useContext(CartContext);
   const [sysMsgHeader, setsysMsgHeader] = useState<React.ReactNode | undefined>(
     undefined
   );
@@ -21,11 +18,8 @@ const Checkout = () => {
   const { checkoutStatus } = useParams<{
     checkoutStatus: CheckoutStatus;
   }>();
-  console.log(checkoutStatus);
 
   useEffect(() => {
-    console.log("useeffect #1");
-    console.log("checkoutStatus: " + checkoutStatus);
     let sysMsgHeader: React.ReactNode | undefined;
     let bodyContent: React.ReactNode | undefined;
     if (checkoutStatus === "success") {
@@ -69,8 +63,6 @@ const Checkout = () => {
     setsysMsgHeader(sysMsgHeader);
     setBodyContent(bodyContent);
   }, [checkoutStatus]);
-
-  //if sucesss, retrieve order confirmation - TBD?
 
   return (
     <>

@@ -9,10 +9,6 @@ const Shop = () => {
   const [inputField, setInputField] = useState("");
   const [filteredList, setFilteredList] = useState(products);
 
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
-
   useEffect(() => {
     setFilteredList(products);
   }, [products]);

@@ -27,9 +27,7 @@ export default function ContactForm() {
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // var x = (document.getElementById("textArea") as HTMLInputElement).value;
-    console.log("on submit");
-    console.log(state);
+
     //then need to send this message to the backend
     let response = await fetch(import.meta.env.VITE_BACKEND_CONTACT_FORM_URL, {
       method: "POST",
@@ -43,7 +41,7 @@ export default function ContactForm() {
 
     //get response from backend
     let result = await response.json();
-    console.log(result);
+
     if (result.status === 200) {
       setSysMsg({ statusCode: result.status, message: "Message Sent" });
 

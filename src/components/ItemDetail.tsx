@@ -32,17 +32,6 @@ export default function ItemDetail({
     stripeProductId,
   } = product;
 
-  console.log("item detail");
-  console.log(
-    id,
-    itemName,
-    imageId,
-    price,
-    bulgarianName,
-    stripePriceId,
-    stripeProductId
-  );
-
   const { addToCart, increaseQty, decreaseQty, cartItems, removeFromCart } =
     useContext(CartContext);
 

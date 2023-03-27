@@ -33,28 +33,20 @@ export default function Navbar() {
   const scroller = Scroll.scroller;
   const [anchorClicked, setAnchorClicked] = useState(false);
 
-  console.log("cart item from context");
-  console.log(cartItems);
-
   useEffect(() => {
-    console.log("useEffect navbar ");
-    console.log("window.location.pathname: " + window.location.pathname);
     let navigation = updateNavigation(nav);
-    console.log(navigation);
+
     setNav([...navigation]);
   }, [window.location.pathname]);
 
   const updateNavigation = (navigation: NavItem[]) => {
     const pathName = window.location.pathname;
 
-    console.log("pathName: " + pathName);
-
     // loop through the navigation array
     for (let i = 0; i < navigation.length; i++) {
       if (pathName === navigation[i].to.toLowerCase()) {
         // if the URL path contains the href value, set current to true
         navigation[i].current = true;
-        console.log("pathName: " + pathName + "nagivation.current is true");
 
         //note if contact is clicked, home will be true, and contact is false
       } else {
@@ -62,15 +54,12 @@ export default function Navbar() {
         navigation[i].current = false;
       }
     }
-    console.log("navigation: ");
-    console.log(navigation);
+
     return navigation;
   };
 
   useEffect(() => {
-    console.log("path");
     if (path === "/home" && anchorClicked) {
-      console.log("path is /home");
       scrollToAnchor();
     } else if (path === "/shop" || path === "/about") {
       setAnchorClicked(false);
@@ -78,7 +67,6 @@ export default function Navbar() {
   }, [path]);
 
   const scrollToAnchor = () => {
-    console.log("scroll to anchor");
     scroller.scrollTo("contact", {
       duration: 1500,
       delay: 100,
@@ -88,7 +76,6 @@ export default function Navbar() {
   };
 
   const goToHomeAndScroll = async () => {
-    console.log("go to home and scroll");
     navigate("/");
     setAnchorClicked(true);
   };

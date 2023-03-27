@@ -7,7 +7,6 @@ import { CartState, CartAction } from "../../types/type";
 
 //Local Storage
 const storage = (() => {
-  console.log("storage");
   const item = localStorage.getItem("cartItems");
   return item ? JSON.parse(item) : [];
 })();
@@ -17,7 +16,6 @@ export const CartContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  console.log("CartStateProvider - getting initialState");
   //   Initial State of the cart
   const initialState = {
     cartItems: storage,
@@ -25,13 +23,12 @@ export const CartContextProvider = ({
     checkout: false,
     userId: "testuser",
   };
-  console.log(initialState);
+
   //Set up the reducer
   const [state, dispatch] = useReducer(CartReducer, initialState);
 
   //Function to handle when an item is added from the store into the Cart
   const addToCart = (payload: CartItem) => {
-    console.log("addtocart" + payload);
     dispatch({ type: "ADD_TO_CART", payload });
   };
 

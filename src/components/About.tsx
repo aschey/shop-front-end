@@ -8,8 +8,6 @@ import {
 } from "../utilities/about-chef";
 
 const About = () => {
-  const { products, addProduct } = useContext(ProductContext);
-
   return (
     <>
       <section className="w-full bg-secondary-900 pt-14 dark:bg-gray-900">

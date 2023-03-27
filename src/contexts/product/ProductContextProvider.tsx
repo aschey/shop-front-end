@@ -2,8 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 import { Product } from "../../types/interface";
 
-//swap out products to get from the db instead of static product list. ONLY GET
-//finish all routes? -- but some are admin only
+//TODO: finish all routes
 type ProductContextType = {
   products: Product[];
   addProduct: (
@@ -13,7 +12,6 @@ type ProductContextType = {
     imageId: string,
     price: number
   ) => void;
-  // getProducts: () => void;
 };
 
 export const ProductContext = createContext<ProductContextType>({
@@ -27,7 +25,6 @@ export const ProductContext = createContext<ProductContextType>({
   // getProducts: () => void;
 });
 
-// const ProductContext = createContext();
 export const useShopContext = () => useContext(ProductContext);
 
 export const ProductContextProvider = ({
@@ -52,22 +49,6 @@ export const ProductContextProvider = ({
     }
     getProducts();
   }, []);
-
-  // const getProducts = async () => {
-  //   console.log("getProduct");
-  //   console.log(`${import.meta.env.VITE_BACKEND_DB_URL}/api/products`);
-  //   const response = await axios.get(
-  //     `${import.meta.env.VITE_BACKEND_DB_URL}/api/products`
-  //   );
-
-  //   // console.log(response);
-
-  //   if (response.status === 200) {
-  //     setProducts(response.data);
-  //   } else {
-  //     throw Error("no products");
-  //   }
-  // };
 
   const addProduct = async (
     itemName: string,

@@ -8,18 +8,15 @@ export const Search = ({
   setFilteredList,
 }: SearchProps) => {
   const searchShop = (inputItem: any) => {
-    console.log("search: " + inputField);
     let filteredProductList = products;
     if (inputField) {
       filteredProductList = products.filter((item) =>
         item.itemName.toLowerCase().includes(inputItem.toLowerCase())
       );
     } else {
-      console.log("no input");
       setFilteredList(products);
     }
 
-    console.log(filteredProductList);
     setFilteredList(filteredProductList);
 
     //if not found will return empty
@@ -27,7 +24,7 @@ export const Search = ({
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputField(e.target.value);
-    console.log(inputField);
+
     searchShop(e.target.value);
   };
 

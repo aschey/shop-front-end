@@ -4,20 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Cart = () => {
-  console.log("Cart Page-  cartItem:");
-
   const { cartItems, clearCart, totalPrice, decreaseQty, increaseQty } =
     useContext(CartContext);
-  console.log(cartItems);
-  console.log("totalPrice: " + totalPrice);
-  const navigate = useNavigate();
 
-  //TODO
   const handleCheckOutProcess = async () => {
-    console.log("handleCheckoutPorcess");
-    console.log("checkout items:");
-    console.log(cartItems);
-
     const checkoutItems = cartItems.map(
       ({ stripePriceId: price, qty: quantity }) => ({
         price,
@@ -27,12 +17,6 @@ const Cart = () => {
 
     //initiate stripe checkout and also clear cart (clear cart only when checkout is successful?)
     (async () => {
-      // const createStripeCheckoutSession = async () => {
-      // (async () => {
-      console.log("createStripeCheckoutSession");
-      console.log(
-        `${import.meta.env.VITE_BACKEND_DB_URL}/api/create-checkout-session`
-      );
       const response = await axios.post(
         `${import.meta.env.VITE_BACKEND_DB_URL}/api/create-checkout-session`,
         {
@@ -40,12 +24,7 @@ const Cart = () => {
         }
       );
 
-      console.log("awaited response");
-      console.log(response);
-
       if (response.status === 200) {
-        console.log("200 response");
-        console.log(response.data);
         const redirectCheckoutUrl = response.data;
         window.location.href = redirectCheckoutUrl;
         // navigate(`/${redirectCheckoutUrl}`);

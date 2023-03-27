@@ -12,18 +12,13 @@ import {
 } from "../utilities/slideshowImages-Testimonials";
 
 export function Home() {
-  //   console.log("Home");
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const { products, addProduct } = useContext(ProductContext);
-  const { addToCart, increaseQty, decreaseQty, cartItems, removeFromCart } =
-    useContext(CartContext);
 
   const Element = Scroll.Element;
 
   useEffect(() => {
-    console.log("use effect ");
     const timerHeroImg = setInterval(() => {
       setCurrentSlide((prevSlide) =>
         prevSlide === slideshowImages.length - 1 ? 0 : prevSlide + 1

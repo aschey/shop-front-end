@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+//TODO: research redirect - this is not working
 const Redirect = () => {
   useEffect(() => {
     const domain1 = "shop-front-end.onrender.com";
