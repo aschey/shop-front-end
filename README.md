@@ -1,4 +1,6 @@
 **Ecommerce Site:**
+🌱[Work In Progress Demo](https://masterchefgeorgi.ddns.net/home)
+<br />
 
 - Front-end: vite + react + typescript + tailwindcss v3
   <br />
@@ -7,10 +9,6 @@
   - API1 (Nodemailer): API created with ExpressJs; Dockerized and Deployed via Cloud Run
   - API2 (Stripe Checkout + Sync with MongoDB): API created with NestJs; Dockerized and Deployed via Cloud Run
     <br />
-
-🌱[Work In Progress Demo](https://masterchefgeorgi.ddns.net/home)
-
-<br />
 
 **TODOs**
 
