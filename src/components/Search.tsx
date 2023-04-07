@@ -36,12 +36,12 @@ export const Search = ({
 
   return (
     <>
-      <div className="flex gap-2">
+      <div className="flex w-full gap-2">
         <input
           type="text"
           id="quantity"
           name="quantity"
-          className="border-round w-80 rounded-lg"
+          className="border-round w-full rounded-lg text-3xl lg:w-80 lg:text-base"
           required
           maxLength={30}
           placeholder="Shopska Salad ..."
@@ -49,7 +49,7 @@ export const Search = ({
           onChange={handleChange}
         ></input>
         <button
-          className="inline-flex w-40 items-center justify-center rounded-lg bg-primary-500 px-4 py-2.5 text-center text-base font-medium text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+          className="inline-flex w-80 items-center justify-center rounded-lg bg-primary-500 py-4 px-8 text-center text-3xl font-medium text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 lg:w-40 lg:py-2.5 lg:text-base"
           onClick={searchShop}
         >
           Search

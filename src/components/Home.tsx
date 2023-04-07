@@ -52,22 +52,22 @@ export function Home() {
   return (
     <>
       {/* ------------------- HERO SECTION  ----------------*/}
-      <section className="hero bg-primary-400 pt-16 dark:bg-gray-900">
+      <section className="hero bg-primary-400 pt-48 pb-28 dark:bg-gray-900 lg:pt-16 lg:pb-2">
         <div className="mx-auto grid max-w-screen-xl px-4 py-10 lg:grid-cols-12 lg:gap-12 lg:py-16 xl:gap-4">
-          <div className="mr-auto place-self-center lg:col-span-5">
-            <h1 className="text-shadow-header mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-primary-100 dark:text-white md:text-5xl xl:text-6xl">
+          <div className="mr-auto w-full place-self-center px-28 text-center lg:col-span-5 lg:px-0 lg:text-start">
+            <h1 className="text-shadow-header mb-4 w-full text-8xl font-extrabold leading-none tracking-tight text-primary-100 dark:text-white lg:max-w-2xl lg:text-4xl xl:text-6xl">
               MasterChef Georgi
             </h1>
-            <p className="mb-6 max-w-2xl font-light text-white dark:text-gray-400 md:text-lg lg:mb-8 lg:text-xl">
+            <p className="mb-6 mt-12 text-4xl font-light text-white dark:text-gray-400 lg:mt-1 lg:mb-8 lg:max-w-2xl lg:text-xl">
               Explore the rich flavors of Bulgarian cuisine and bring a taste of
               Bulgaria to your home!
             </p>
-            <div className="flex w-full gap-5">
+            <div className="mt-20 flex w-full flex-col gap-10 lg:mt-1 lg:flex-row lg:gap-5">
               <Link to="/shop">
-                <button className="button-shake inline-flex min-w-[120px] items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-base font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 sm:h-auto sm:w-1/4">
+                <button className="button-shake inline-flex w-full items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-3xl font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 lg:h-auto lg:w-1/4 lg:min-w-[120px] lg:text-lg">
                   Shop
                   <svg
-                    className="ml-2 -mr-1 h-5 w-5"
+                    className="ml-4 -mr-1 h-14 lg:ml-0 lg:h-5 lg:w-14"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ export function Home() {
               </Link>
               <Link
                 to="/about-bulgaria"
-                className="btn-whats-bulgarian-cuisine inline-flex min-w-[150px] items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-gray-100 dark:border-gray-700  dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800 sm:w-3/4 lg:w-2/4"
+                className="btn-whats-bulgarian-cuisine inline-flex min-w-[150px] items-center justify-center rounded-lg border border-gray-300 px-5 py-6 text-center text-3xl font-medium text-gray-900 hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700  dark:focus:ring-gray-800 lg:w-3/4 lg:py-3 lg:text-base"
               >
                 What Is Bulgarian Cuisine?
               </Link>
@@ -119,32 +119,30 @@ export function Home() {
       </section>
       {/* ------------------- POPULAR MENU SECTION  ----------------*/}
       <section className="bg-secondary-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-screen-xl py-8 px-4 lg:py-16 lg:px-6 ">
-          <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
-            <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+        <div className="mx-auto max-w-screen-xl py-8 px-8 lg:py-16 lg:px-6 ">
+          <div className="mx-auto mt-8 mb-8 max-w-screen-sm text-center lg:mt-2 lg:mb-16">
+            <h2 className="mb-4 text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
               Most Popular
             </h2>
-            <p className="font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
+            <p className="text-3xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-lg">
               Tastiest Bulgarian Delights That We Love
             </p>
           </div>
-          <div className="mb-4 grid gap-5 lg:mb-10">
+          <div className="mx-auto grid max-w-screen-md gap-5 lg:mb-10 lg:max-w-screen-xl ">
             {/* ---------------Popular Individual Item START------------*/}
-            {/* <div className="max-w-screen container mx-auto h-auto min-h-[70vh] p-4 lg:p-6"> */}
-            <div className="grid w-full gap-16 pt-12 pb-12 sm:grid-cols-1 lg:grid-cols-2 lg:pb-12">
+            <div className="grid w-full grid-cols-1 gap-16 pt-12 pb-12 lg:grid-cols-2 lg:pb-12">
               {/* //shows first four products only */}
               {products.slice(0, 4).map((product) => {
                 return (
                   <div key={product.id}>
                     <ItemDetail
                       product={product}
-                      cardClass="grid grid-cols-2"
-                      aTagClass=""
-                      flexClass1=""
-                      flexClass2=""
-                      flexClass3=""
-                      itemDescription=""
-                      buttonDivClass="right-0 w-1/2"
+                      cardClass="lg:grid-cols-2 grid grid-cols-1"
+                      aTagClass={""}
+                      flexClass1={""}
+                      flexClass2={""}
+                      flexClass3={""}
+                      buttonDivClass={"left-1/2 lg:w-1/2"}
                     />
                   </div>
                 );
@@ -158,7 +156,7 @@ export function Home() {
       </section>
       {/* ------------------- TESTIMONIAL SECTION  ----------------*/}
       <section className="bg-white dark:bg-gray-900">
-        <div className="relative mx-auto h-96 max-w-screen-xl px-4 py-8 text-center lg:py-16 lg:px-6">
+        <div className="relative mx-auto mt-28 h-96 max-w-screen-xl px-4 py-8 text-center lg:mt-0 lg:py-16 lg:px-6">
           <div
             className="absolute left-0 top-1/2 -translate-y-1/2 transform cursor-pointer"
             onClick={handlePrevClick}
@@ -169,7 +167,7 @@ export function Home() {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="h-6 w-6 text-secondary-900"
+              className="h-10 w-10 text-secondary-900 lg:h-6 lg:w-6"
             >
               <path
                 strokeLinecap="round"
@@ -188,7 +186,7 @@ export function Home() {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="h-6 w-6  text-secondary-900"
+              className="h-10 w-10 text-secondary-900 lg:h-6 lg:w-6"
             >
               <path
                 strokeLinecap="round"
@@ -210,16 +208,16 @@ export function Home() {
               />
             </svg>
             <blockquote>
-              <p className="text-2xl font-medium text-gray-600 dark:text-white">
+              <p className="text-3xl font-medium text-gray-600 dark:text-white lg:text-2xl">
                 {testimonials[currentTestimonialIndex].quote}
               </p>
             </blockquote>
-            <figcaption className=" mt-6 flex items-center justify-center space-x-3">
+            <figcaption className="mt-6 flex items-center justify-center space-x-3">
               <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div className="pr-3 font-medium text-gray-900 dark:text-white">
+                <div className="pr-3 text-2xl font-medium text-gray-900 dark:text-white lg:text-lg">
                   {testimonials[currentTestimonialIndex].author}
                 </div>
-                <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
+                <div className="lg:text-md pl-3 text-lg font-light text-gray-500 dark:text-gray-400">
                   {testimonials[currentTestimonialIndex].location}
                 </div>
               </div>

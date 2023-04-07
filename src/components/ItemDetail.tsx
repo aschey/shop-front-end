@@ -10,7 +10,6 @@ export default function ItemDetail({
   flexClass1,
   flexClass2,
   flexClass3,
-  itemDescription,
   buttonDivClass,
 }: {
   product: Product;
@@ -19,7 +18,6 @@ export default function ItemDetail({
   flexClass1: string;
   flexClass2: string;
   flexClass3: string;
-  itemDescription: string;
   buttonDivClass: string;
 }) {
   const {
@@ -30,6 +28,7 @@ export default function ItemDetail({
     bulgarianName,
     stripePriceId,
     stripeProductId,
+    itemDescription,
   } = product;
 
   const { addToCart, increaseQty, decreaseQty, cartItems, removeFromCart } =
@@ -51,12 +50,12 @@ export default function ItemDetail({
 
   return (
     <div
-      className={`data-id=${id} relative items-center rounded-lg bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-800 ${cardClass}`}
+      className={`data-id=${id} relative items-center rounded-lg bg-gray-50 shadow-lg dark:border-gray-700 dark:bg-gray-800 lg:shadow-sm ${cardClass}`}
     >
-      <a className={`${aTagClass} md:relative md:inline-block`}>
+      <a className={`md:relative md:inline-block ${aTagClass}`}>
         <img
           // className="w-full rounded-lg sm:rounded-lg"
-          className="rounded-t-lg object-fill sm:h-[24rem] sm:w-full sm:rounded-lg md:h-[13rem] md:w-[18rem]"
+          className="h-[34rem] rounded-t-lg object-fill sm:w-full sm:rounded-lg lg:h-[13rem] lg:w-[18rem]"
           src={
             imageId[0] ||
             "https://a-z-animals.com/media/2022/12/shutterstock_583277200.jpg"
@@ -75,25 +74,25 @@ export default function ItemDetail({
         className={`${flexClass1} block h-full flex-col justify-between p-8 sm:pb-28`}
       >
         <div className={`${flexClass2} flex justify-between`}>
-          <h3 className=" text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h3 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white lg:text-xl">
             <a href="#">{itemName}</a>
           </h3>
-          <h3>${price}</h3>
+          <h3 className="text-4xl lg:text-lg">${price}</h3>
         </div>
         <span
-          className={`${flexClass3} italic text-gray-500 dark:text-gray-400`}
+          className={`${flexClass3} text-4xl italic text-gray-500 dark:text-gray-400 lg:text-lg`}
         >
           {bulgarianName}
         </span>
 
         {/* only show itemDescription on screen on mobile */}
-        <p className="hidden self-center py-4 italic text-gray-500 sm:block md:hidden">
+        <p className="block self-center py-4 text-3xl italic text-gray-500 lg:hidden lg:text-lg">
           {itemDescription}
         </p>
       </div>
       {/* --------------add to cart button START-------------- */}
       <div
-        className={`absolute bottom-4 flex ${buttonDivClass} justify-center`}
+        className={`${buttonDivClass} bottom-4 mb-10 flex justify-center lg:absolute lg:right-0 lg:mb-0`}
         // className={`absolute bottom-4 right-0 flex w-1/2 justify-center`}
       >
         {!isInCart(product) || currentCartItemQty(product) === 0 ? (
@@ -102,7 +101,7 @@ export default function ItemDetail({
               onClick={() => {
                 addToCart(product);
               }}
-              className="border-lg mt-auto flex h-10 w-[70%] items-center justify-center gap-2 rounded-full border border-gray-200 bg-secondary-500 text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white"
+              className="border-lg mt-auto flex h-20 w-[70%] items-center justify-center gap-2 rounded-full border border-gray-200 bg-secondary-500 text-3xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:h-10 lg:text-lg"
             >
               {" "}
               <svg
@@ -111,7 +110,7 @@ export default function ItemDetail({
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="h-6 w-6"
+                className="h-10 w-10 lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -123,16 +122,16 @@ export default function ItemDetail({
             </button>
           </div>
         ) : (
-          <div className="mt-auto flex items-center justify-center">
+          <div className="mt-auto flex h-auto items-stretch justify-center">
             <button
-              className="rounded-lg rounded-r-none border border-gray-200 bg-secondary-500 px-2 py-1 text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white"
+              className="rounded-lg rounded-r-none border border-gray-200 bg-secondary-500 px-2 py-1 text-6xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:text-lg"
               onClick={() => {
                 decreaseQty(product);
               }}
             >
               -
             </button>
-            <span className="flex h-auto items-center bg-secondary-100 px-10 py-1">
+            <span className="flex h-20 items-center bg-secondary-100 px-20 py-1 text-3xl lg:h-10 lg:px-10 lg:text-lg">
               {isInCart(product) && currentCartItemQty(product)
                 ? currentCartItemQty(product)
                 : 0}
@@ -141,7 +140,7 @@ export default function ItemDetail({
               onClick={() => {
                 increaseQty(product);
               }}
-              className="rounded-lg rounded-l-none border border-gray-200 bg-secondary-500 px-2 py-1 text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white"
+              className={`rounded-lg rounded-l-none border border-gray-200 bg-secondary-500 px-2 py-1 text-6xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:text-lg`}
             >
               +
             </button>

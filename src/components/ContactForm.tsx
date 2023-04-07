@@ -58,20 +58,20 @@ export default function ContactForm() {
   return (
     <>
       <section className="bg-secondary-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-screen-md py-8 px-4 lg:py-16">
-          <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+        <div className="mx-auto mt-10 max-w-screen-md py-24 px-4 lg:mt-1 lg:py-16">
+          <h2 className="mb-4 text-center text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
             Contact Us
           </h2>
-          <p className="text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
+          <p className="mt-8 mb-12 text-center text-3xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
             Why not add some Bulgarian flair to your next party or special
             event? We provide catering services that meet your need. Call us
             directly for a direct quote.
           </p>
-          <table className="border-lg mx-auto mb-16 w-4/5 table-fixed rounded-lg bg-white">
+          <table className="border-lg mx-auto mb-16 w-full table-fixed rounded-lg bg-white lg:w-4/5">
             <thead>
               <tr>
                 <th className="w-1/4 pt-4 text-secondary-900">
-                  <div className="flex justify-center gap-2">
+                  <div className="flex justify-center gap-2 text-2xl lg:text-xl">
                     Call
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ export default function ContactForm() {
                   </div>
                 </th>
                 <th className="w-2/4 pt-4 text-secondary-900">
-                  <div className="flex justify-center gap-2">
+                  <div className="flex justify-center gap-2 text-2xl lg:text-xl">
                     Email
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ export default function ContactForm() {
                   </div>
                 </th>
                 <th className="w-1/4 pt-4 text-secondary-900">
-                  <div className="flex justify-center gap-2">
+                  <div className="flex justify-center gap-2 text-2xl lg:text-xl">
                     Location
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -131,14 +131,20 @@ export default function ContactForm() {
             </thead>
             <tbody>
               <tr>
-                <td className="w-1/4 py-4 text-center">+1 xxx-xxx-xxxx</td>
-                <td className="w-2/4 text-center">xyz@masterchef-georgi.com</td>
-                <td className="w-1/4 text-center">Chicago, IL</td>
+                <td className="w-1/4 py-4 text-center text-2xl lg:text-xl">
+                  +1 xxx-xxx-xxxx
+                </td>
+                <td className="w-2/4 text-center text-2xl lg:text-xl">
+                  xyz@masterchef-georgi.com
+                </td>
+                <td className="w-1/4 text-center text-2xl lg:text-xl">
+                  Chicago, IL
+                </td>
               </tr>
             </tbody>
           </table>
           <hr />
-          <p className="my-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
+          <p className="my-10 text-center text-3xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
             Have Questions? Leave Us A Message!
           </p>
           <form onSubmit={onSubmit} id="contact-form" className="space-y-4">
@@ -146,14 +152,14 @@ export default function ContactForm() {
               <div className="w-1/4 flex-col">
                 <label
                   htmlFor="firstname"
-                  className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
                 >
                   First Name
                 </label>
                 <input
                   type="text"
                   id="firstname"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="First Name"
                   onChange={onFieldChange}
                   required
@@ -162,14 +168,14 @@ export default function ContactForm() {
               <div className="w-1/4 flex-col">
                 <label
                   htmlFor="lastname"
-                  className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
                 >
                   Last Name
                 </label>
                 <input
                   type="text"
                   id="lastname"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="Last Name"
                   onChange={onFieldChange}
                   required
@@ -178,14 +184,14 @@ export default function ContactForm() {
               <div className="w-1/2 flex-col">
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
                 >
                   Your email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="name@email.com"
                   onChange={onFieldChange}
                   required
@@ -195,14 +201,14 @@ export default function ContactForm() {
             <div>
               <label
                 htmlFor="subject"
-                className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
+                className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
               >
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                 placeholder="Let us know how we can help"
                 onChange={onFieldChange}
                 required
@@ -211,14 +217,14 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
-                className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-400"
+                className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-400 lg:text-sm"
               >
                 Your message
               </label>
               <textarea
                 id="message"
                 rows={6}
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                 placeholder="Leave a comment..."
                 onChange={onFieldChange}
                 minLength={10}
@@ -227,12 +233,12 @@ export default function ContactForm() {
             </div>
             <button
               type="submit"
-              className="rounded-lg bg-secondary-500 py-3 px-5 text-center text-sm font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit"
+              className="rounded-lg bg-secondary-500 py-4 px-6 text-center text-3xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit lg:py-3 lg:text-sm"
             >
               Send message
             </button>
           </form>
-          {sysMsg.statusCode > 0 ? <SystemMessage sysMsg={sysMsg} /> : null}
+          {sysMsg.statusCode > "0" ? <SystemMessage sysMsg={sysMsg} /> : null}
         </div>
       </section>
     </>

@@ -19,4 +19,9 @@
   - Need more responsive design
 
 - Back End:
+
   - Create scheduled job to sync with MongoDB
+
+- Other:
+
+  - Integrate Google Analytifcs

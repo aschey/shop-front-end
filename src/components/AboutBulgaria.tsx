@@ -3,7 +3,7 @@ import { WhatIsBulgarianCuisine } from "../utilities/about-chef";
 const AboutBulgaria = () => {
   return (
     <>
-      <section className="w-full bg-secondary-900 pt-14 dark:bg-gray-900">
+      <section className="w-full bg-secondary-900 pt-48 pb-28 dark:bg-gray-900 lg:pt-14">
         <div className="mx-auto max-w-screen-xl sm:py-16 lg:px-16">
           <div className="max-w-screen-md">
             <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-200 dark:text-white">

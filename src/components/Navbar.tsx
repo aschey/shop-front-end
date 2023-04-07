@@ -82,11 +82,13 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="fixed z-50 w-full border-gray-200 bg-white px-4 py-2.5 dark:bg-gray-800 lg:px-6">
+      <nav className="fixed z-50 w-full border-gray-200 bg-white px-4 py-8 dark:bg-gray-800 lg:py-3 lg:px-6">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
           <a href="/" className="flex items-center md:min-w-[200px]">
-            <p className="text-shadow-header mr-3 h-9 text-4xl">🇧🇬</p>
-            <span className="text-shadow-header self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
+            <p className="text-shadow-header mr-3 h-9 text-5xl lg:text-4xl">
+              🇧🇬
+            </p>
+            <span className="text-shadow-header self-center whitespace-nowrap text-5xl font-semibold dark:text-white lg:text-2xl">
               MasterChef Georgi
             </span>
           </a>
@@ -101,7 +103,7 @@ export default function Navbar() {
             <>
               <Link
                 to="/cart"
-                className="relative mr-2 rounded-lg bg-secondary-600 px-4 py-2 text-sm font-medium text-white hover:bg-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:px-5 lg:py-2.5"
+                className="relative mr-2 rounded-lg bg-secondary-600 px-6 py-4 text-sm font-medium text-white hover:bg-primary-400 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lg:px-5 lg:py-2.5"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +111,7 @@ export default function Navbar() {
                   viewBox="0 0 20 20"
                   strokeWidth={1.8}
                   stroke="currentColor"
-                  className="h-6 w-7"
+                  className="h-12 w-24 lg:h-7 lg:w-12"
                 >
                   <path
                     strokeLinecap="round"
@@ -119,9 +121,9 @@ export default function Navbar() {
                 </svg>
                 {itemCount ? (
                   <>
-                    <span className="absolute right-[-5px] bottom-[-5px] flex h-5 w-5">
+                    <span className="lg:bottom-[-5px]flex absolute right-[-10px] bottom-[-10px] h-10 w-10 lg:right-[-5px] lg:h-5 lg:w-5">
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary-300 opacity-75"></span>
-                      <span className="relative inline-flex h-5 w-5 items-center justify-center rounded-full bg-secondary-300 text-xs text-white">
+                      <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary-300 text-xl text-white lg:h-5 lg:w-5 lg:text-xs">
                         {itemCount}
                       </span>
                     </span>
@@ -140,7 +142,7 @@ export default function Navbar() {
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="h-6 w-6"
+                className="h-12 w-28 lg:h-6 lg:w-7"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -177,8 +179,8 @@ export default function Navbar() {
                       <button
                         className={
                           anchorClicked
-                            ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-primary-700"
-                            : "block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                            ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-3xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                            : "block border-b border-gray-100 py-2 text-3xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                         }
                         onClick={scrollToAnchor}
                       >
@@ -188,8 +190,8 @@ export default function Navbar() {
                       <button
                         className={
                           anchorClicked
-                            ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-primary-700"
-                            : "block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                            ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-3xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                            : "block border-b border-gray-100 py-2 pr-4 pl-3 text-3xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                         }
                         onClick={goToHomeAndScroll}
                       >
@@ -203,8 +205,8 @@ export default function Navbar() {
                       to={item.to}
                       className={
                         item.current
-                          ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-primary-700"
-                          : "block border-b border-gray-100 py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                          ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-3xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                          : "block border-b border-gray-100 py-2 pr-4 pl-3 text-3xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                       }
                       aria-current={item.current ? "page" : undefined}
                     >

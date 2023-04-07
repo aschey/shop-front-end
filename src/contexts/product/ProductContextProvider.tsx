@@ -36,7 +36,6 @@ export const ProductContextProvider = ({
 
   //gets products once from mongodb backend upon mounting
   useEffect(() => {
-    console.log("getProduct");
     async function getProducts() {
       const response = await axios.get(
         `${import.meta.env.VITE_BACKEND_DB_URL}/api/products`
