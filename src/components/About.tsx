@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <section className="w-full bg-secondary-900 pt-48 pb-28 dark:bg-gray-900 lg:pt-14">
-        <div className="mx-auto max-w-screen-md py-16 lg:max-w-screen-xl lg:px-16">
+        <div className="mx-auto max-w-screen-md py-10 px-4 sm:py-16 lg:max-w-screen-xl lg:px-6">
           <div className="max-w-screen-md">
             <h2 className="mb-4 text-6xl font-extrabold tracking-tight text-gray-200 dark:text-white lg:text-4xl">
               About Me

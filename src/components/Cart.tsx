@@ -43,24 +43,24 @@ const Cart = () => {
             {cartItems.length === 0 ? (
               <p>Your Cart Is Empty 🛒</p>
             ) : (
-              <h1>Your Cart</h1>
+              <p>Your Cart</p>
             )}
           </h2>
         </div>
       </section>
       <section className="w-full bg-secondary-50 text-gray-700 dark:bg-gray-800">
-        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-xl flex-col items-center p-4 lg:p-6">
+        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-lg flex-col items-center p-4 lg:max-w-screen-xl lg:p-6">
           {cartItems.length === 0 && (
             <Link
               to="/shop"
-              className="rounded-md px-3 py-2 text-lg font-medium"
+              className="rounded-md px-3 py-2 text-xl font-medium lg:text-lg"
             >
               Click Here to Continue Shopping
             </Link>
           )}
           {cartItems.length > 0 && (
             <>
-              <table className="border-lg m-16 mx-auto w-11/12 table-fixed rounded-lg bg-white text-xl lg:text-lg">
+              <table className="border-lg m-16 mx-auto w-11/12 table-fixed rounded-lg bg-white text-2xl lg:text-lg">
                 <thead>
                   <tr>
                     <th className="border-b-2 border-primary-800 py-4 font-bold">
@@ -75,7 +75,7 @@ const Cart = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody className=" text-center">
+                <tbody className="text-center">
                   {cartItems.map((item, index) => {
                     return (
                       <tr key={item.id}>

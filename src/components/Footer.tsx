@@ -2,20 +2,20 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-primary-400 p-4 dark:bg-gray-800 sm:p-6">
-      <div className="mx-auto max-w-screen-xl">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
+      <div className="mx-auto max-w-screen-md lg:max-w-screen-xl">
+        <div className="my-6 flex flex-col md:flex md:justify-between lg:flex-row">
+          <div className="mt-0 md:mb-0">
             <a
               href="#"
-              className="text-shadow-header flex items-center text-4xl"
+              className="text-shadow-header flex items-center text-5xl lg:text-3xl"
             >
               🇧🇬
-              <span className="text-shadow-header self-center whitespace-nowrap px-2 text-2xl font-semibold text-secondary-100">
+              <span className="text-shadow-header self-center whitespace-nowrap px-2 text-4xl font-semibold text-secondary-100 lg:text-2xl">
                 MasterChef Georgi
               </span>
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 sm:gap-6">
+          <div className="my-10 grid grid-cols-2 gap-8 sm:grid-cols-2 sm:gap-6 lg:mt-0">
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase text-secondary-200 dark:text-white">
                 Follow us
