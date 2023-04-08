@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="my-6 flex flex-col md:flex md:justify-between lg:flex-row">
           <div className="mt-0 md:mb-0">
             <a
-              href="#"
+              href="/"
               className="text-shadow-header flex items-center text-3xl lg:text-3xl"
             >
               🇧🇬

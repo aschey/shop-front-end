@@ -37,9 +37,9 @@ const Cart = () => {
 
   return (
     <>
-      <section className="w-full bg-secondary-900 pt-48 pb-28 dark:bg-gray-900 lg:pt-14">
-        <div className="mx-auto max-w-screen-md py-10 px-4 sm:py-16 lg:max-w-screen-xl lg:px-6">
-          <h2 className="mb-4 text-center text-6xl font-extrabold tracking-tight text-gray-200 dark:text-white lg:text-4xl">
+      <section className="w-full bg-secondary-900 py-10 dark:bg-gray-900 lg:pt-14">
+        <div className="mx-auto py-10 px-4 sm:py-16 lg:max-w-screen-xl lg:px-6">
+          <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-200 dark:text-white lg:text-4xl">
             {cartItems.length === 0 ? (
               <p>Your Cart Is Empty 🛒</p>
             ) : (
@@ -48,19 +48,19 @@ const Cart = () => {
           </h2>
         </div>
       </section>
-      <section className="w-full bg-secondary-50 text-gray-700 dark:bg-gray-800">
-        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-md flex-col items-center p-4 lg:max-w-screen-xl lg:p-6">
+      <section className="w-full bg-secondary-50 py-10 text-gray-700 dark:bg-gray-800">
+        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-md flex-col items-center gap-10 p-4 lg:max-w-screen-xl lg:p-6">
           {cartItems.length === 0 && (
             <Link
               to="/shop"
-              className="rounded-md py-10 px-3 text-4xl font-medium hover:text-secondary-700 lg:text-2xl"
+              className="rounded-sm px-3 text-lg font-medium hover:text-secondary-700"
             >
               Click Here to Continue Shopping
             </Link>
           )}
           {cartItems.length > 0 && (
             <>
-              <table className="border-lg m-16 mx-auto w-full table-fixed rounded-lg bg-white text-2xl lg:text-lg">
+              <table className="border-lg mx-auto w-full table-fixed rounded-lg bg-white text-lg shadow-md">
                 <thead>
                   <tr>
                     <th className="w-fit border-b-2 border-primary-800 py-4 font-bold">
@@ -81,7 +81,7 @@ const Cart = () => {
                   {cartItems.map((item, index) => {
                     return (
                       <tr key={item.id}>
-                        <td className="py-4">{item.itemName}</td>
+                        <td className="h-20 lg:h-14">{item.itemName}</td>
                         <td>${item.price.toFixed(2)}</td>
                         <td>
                           <div className="mt-auto flex items-center justify-center">
@@ -124,31 +124,35 @@ const Cart = () => {
                     </td>
                   </tr>
                   <tr>
-                    <td colSpan={4} className="text-end italic text-gray-500">
+                    <td
+                      colSpan={4}
+                      className="px-2 text-end text-sm italic text-gray-500"
+                    >
                       *Taxes will be calculated at checkout
                     </td>
                   </tr>
                 </tbody>
               </table>
-
-              <button
-                className="button-shake flex min-w-[30vw] items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-2xl font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 sm:w-[80vw] md:w-[30vw] lg:text-base"
-                onClick={handleCheckOutProcess}
-              >
-                Check Out
-                <svg
-                  className="ml-2 -mr-1 h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div className="w-full md:w-auto">
+                <button
+                  className="button-shake flex w-full items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-xl font-bold text-white shadow-md hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 lg:w-[20vw] lg:text-base"
+                  onClick={handleCheckOutProcess}
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
+                  Check Out
+                  <svg
+                    className="ml-2 -mr-1 h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
               {/* </Link> */}
             </>
           )}

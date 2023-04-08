@@ -55,7 +55,7 @@ export default function ItemDetail({
       <a className={`md:relative md:inline-block ${aTagClass}`}>
         <img
           // className="w-full rounded-lg sm:rounded-lg"
-          className="h-[34rem] rounded-t-lg object-fill sm:w-full sm:rounded-lg lg:h-[13rem] lg:w-[18rem]"
+          className="h-[18rem] w-full rounded-t-lg object-fill sm:w-full sm:rounded-lg lg:h-[13rem] lg:w-[18rem]"
           src={
             imageId[0] ||
             "https://a-z-animals.com/media/2022/12/shutterstock_583277200.jpg"
@@ -63,8 +63,8 @@ export default function ItemDetail({
           alt={itemName}
         />
 
-        <div className="align-items collapse absolute inset-0 h-full px-5 py-3 text-center text-xl text-white transition-opacity duration-300 sm:bg-transparent md:flex md:bg-black md:opacity-0 hover:md:opacity-60 lg:visible">
-          <p className="collapse self-center italic md:block lg:visible">
+        <div className="align-items collapse absolute inset-0 h-full px-5 py-3 text-center text-lg text-white transition-opacity duration-300 sm:bg-transparent md:flex md:bg-black md:opacity-0 hover:md:opacity-60 lg:visible">
+          <p className="collapse self-center italic md:visible">
             {itemDescription}
           </p>
         </div>
@@ -74,19 +74,19 @@ export default function ItemDetail({
         className={`${flexClass1} block h-full flex-col justify-between p-8 sm:pb-28`}
       >
         <div className={`${flexClass2} flex justify-between`}>
-          <h3 className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white lg:text-xl">
+          <h3 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white lg:text-xl">
             <a href="#">{itemName}</a>
           </h3>
-          <h3 className="text-4xl lg:text-lg">${price}</h3>
+          <h3 className="text-2xl lg:text-lg">${price}</h3>
         </div>
         <span
-          className={`${flexClass3} text-4xl italic text-gray-500 dark:text-gray-400 lg:text-lg`}
+          className={`${flexClass3} text-2xl italic text-gray-500 dark:text-gray-400 lg:text-lg`}
         >
           {bulgarianName}
         </span>
 
         {/* only show itemDescription on screen on mobile */}
-        <p className="block self-center py-4 text-3xl italic text-gray-500 lg:hidden lg:text-lg">
+        <p className="block self-center py-4 text-xl italic text-gray-500 lg:hidden lg:text-lg">
           {itemDescription}
         </p>
       </div>
@@ -101,7 +101,7 @@ export default function ItemDetail({
               onClick={() => {
                 addToCart(product);
               }}
-              className="border-lg mt-auto flex h-20 w-[70%] items-center justify-center gap-2 rounded-full border border-gray-200 bg-secondary-500 text-3xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:h-10 lg:text-lg"
+              className="border-lg mt-auto flex h-12 w-[70%] items-center justify-center gap-2 rounded-full border border-gray-200 bg-secondary-500 text-xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:h-10 lg:text-lg"
             >
               {" "}
               <svg
@@ -110,7 +110,7 @@ export default function ItemDetail({
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="h-10 w-10 lg:h-6 lg:w-6"
+                className="h-6 w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -124,14 +124,14 @@ export default function ItemDetail({
         ) : (
           <div className="mt-auto flex h-auto items-stretch justify-center">
             <button
-              className="rounded-lg rounded-r-none border border-gray-200 bg-secondary-500 px-2 py-1 text-6xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:text-lg"
+              className="rounded-lg rounded-r-none border border-gray-200 bg-secondary-500 px-2 py-1 text-xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:text-lg"
               onClick={() => {
                 decreaseQty(product);
               }}
             >
               -
             </button>
-            <span className="flex h-20 items-center bg-secondary-100 px-20 py-1 text-3xl lg:h-10 lg:px-10 lg:text-lg">
+            <span className="flex h-10 items-center bg-secondary-100 px-20 py-1 text-xl lg:h-10 lg:px-10 lg:text-lg">
               {isInCart(product) && currentCartItemQty(product)
                 ? currentCartItemQty(product)
                 : 0}
@@ -140,7 +140,7 @@ export default function ItemDetail({
               onClick={() => {
                 increaseQty(product);
               }}
-              className={`rounded-lg rounded-l-none border border-gray-200 bg-secondary-500 px-2 py-1 text-6xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:text-lg`}
+              className={`rounded-lg rounded-l-none border border-gray-200 bg-secondary-500 px-2 py-1 text-xl text-gray-200 hover:border-white hover:bg-secondary-400 hover:text-white dark:hover:text-white lg:text-lg`}
             >
               +
             </button>

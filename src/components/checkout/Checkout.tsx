@@ -31,7 +31,7 @@ const Checkout = () => {
       );
 
       bodyContent = (
-        <div className="flex flex-col items-center py-10 text-xl">
+        <div className="flex flex-col items-center gap-4 py-10 text-lg lg:text-xl">
           <p>
             Your order is being prepared and will be shipped as soon as
             possible!
@@ -39,7 +39,7 @@ const Checkout = () => {
           <p>Be on the lookout for a confirmation email for your purchase</p>
           <Link
             to="/shop"
-            className="rounded-md py-10 px-3 text-4xl font-medium hover:text-secondary-700 lg:text-2xl"
+            className="rounded-md py-10 text-center text-2xl font-medium hover:text-secondary-700 lg:text-start lg:text-2xl"
           >
             Click Here to Continue Shopping
           </Link>
@@ -55,11 +55,11 @@ const Checkout = () => {
         </>
       );
       bodyContent = (
-        <div className="rounded-md py-10 px-3 text-center">
-          <p className="text-3xl lg:text-lg">Click below to return to cart</p>
+        <div className="flex flex-col items-center gap-4 py-10 text-lg lg:text-xl">
+          <p>Click below to return to cart</p>
           <Link
             to="/cart"
-            className="rounded-md py-10 px-3 text-4xl font-medium hover:text-secondary-700 lg:text-2xl"
+            className="rounded-md py-10 text-center text-2xl font-medium hover:text-secondary-700 lg:text-start lg:text-2xl"
           >
             Go To Cart 🛒
           </Link>
@@ -72,15 +72,15 @@ const Checkout = () => {
 
   return (
     <>
-      <section className="w-full bg-secondary-900 pt-48 pb-28 dark:bg-gray-900 lg:pt-14">
-        <div className="mx-auto max-w-screen-md py-8 px-4 sm:py-16 lg:px-6">
-          <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-200 dark:text-white">
+      <section className="w-full bg-secondary-900 py-10 px-8 dark:bg-gray-900 lg:pt-14">
+        <div className="mx-auto max-w-screen-sm py-10 sm:py-16 lg:max-w-screen-xl lg:px-6">
+          <h2 className="mb-4 text-center text-2xl font-extrabold tracking-tight text-gray-200 dark:text-white">
             {sysMsgHeader}
           </h2>
         </div>
       </section>
-      <section className="w-full bg-secondary-50 dark:bg-gray-900">
-        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-md  justify-center p-4 lg:max-w-screen-xl lg:p-6">
+      <section className="w-full bg-secondary-50 px-8 dark:bg-gray-900">
+        <div className="container mx-auto flex h-auto min-h-[70vh] justify-center p-4 lg:max-w-screen-xl lg:p-6">
           {bodyContent}
         </div>
       </section>

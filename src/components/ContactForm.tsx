@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { SystemMessage } from "./utility-components/system";
 import { SysMsg } from "../types/interface";
+import { Spinner } from "flowbite-react";
 
 export default function ContactForm() {
   const [state, setState] = useState({
@@ -58,11 +59,11 @@ export default function ContactForm() {
   return (
     <>
       <section className="bg-secondary-50 dark:bg-gray-900">
-        <div className="mx-auto mt-10 max-w-screen-md py-24 px-4 lg:mt-1 lg:py-16">
-          <h2 className="mb-4 text-center text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
+        <div className="mx-auto mt-10 max-w-screen-md py-24 px-6 lg:mt-1 lg:py-16">
+          <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
             Contact Us
           </h2>
-          <p className="mt-8 mb-12 text-center text-3xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
+          <p className="mt-8 mb-12 text-center text-xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
             Why not add some Bulgarian flair to your next party or special
             event? We provide catering services that meet your need. Call us
             directly for a direct quote.
@@ -71,7 +72,7 @@ export default function ContactForm() {
             <thead>
               <tr>
                 <th className="w-1/4 pt-4 text-secondary-900">
-                  <div className="flex justify-center gap-2 text-2xl lg:text-xl">
+                  <div className="flex justify-center gap-2 text-lg">
                     Call
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -89,8 +90,8 @@ export default function ContactForm() {
                     </svg>
                   </div>
                 </th>
-                <th className="w-2/4 pt-4 text-secondary-900">
-                  <div className="flex justify-center gap-2 text-2xl lg:text-xl">
+                <th className="w-2/5 pt-4 text-secondary-900 lg:w-2/4">
+                  <div className="flex justify-center gap-2 text-lg">
                     Email
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +110,7 @@ export default function ContactForm() {
                   </div>
                 </th>
                 <th className="w-1/4 pt-4 text-secondary-900">
-                  <div className="flex justify-center gap-2 text-2xl lg:text-xl">
+                  <div className="flex justify-center gap-2 text-lg">
                     Location
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -131,67 +132,67 @@ export default function ContactForm() {
             </thead>
             <tbody>
               <tr>
-                <td className="w-1/4 py-4 text-center text-2xl lg:text-xl">
+                <td className="w-1/4 py-4 text-center text-lg">
                   +1 xxx-xxx-xxxx
                 </td>
-                <td className="w-2/4 text-center text-2xl lg:text-xl">
+                <td className="w-2/4 text-center text-lg">
                   xyz@masterchef-georgi.com
                 </td>
-                <td className="w-1/4 text-center text-2xl lg:text-xl">
-                  Chicago, IL
-                </td>
+                <td className="w-1/4 text-center text-lg">Chicago, IL</td>
               </tr>
             </tbody>
           </table>
           <hr />
-          <p className="my-10 text-center text-4xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
+          <p className="my-10 text-center text-2xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
             Have Questions? Leave Us A Message!
           </p>
           <form onSubmit={onSubmit} id="contact-form" className="space-y-4">
-            <div className="flex w-full gap-5">
-              <div className="w-1/4 flex-col">
-                <label
-                  htmlFor="firstname"
-                  className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
-                >
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  id="firstname"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
-                  placeholder="First Name"
-                  onChange={onFieldChange}
-                  required
-                />
+            <div className="flex w-full flex-col gap-5 lg:flex-row">
+              <div className="flex gap-4 lg:flex-initial">
+                <div className="lg:flex-col">
+                  <label
+                    htmlFor="firstname"
+                    className="mb-2 block text-xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
+                  >
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstname"
+                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                    placeholder="First Name"
+                    onChange={onFieldChange}
+                    required
+                  />
+                </div>
+                <div className="lg:flex-col">
+                  <label
+                    htmlFor="lastname"
+                    className="mb-2 block text-xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastname"
+                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                    placeholder="Last Name"
+                    onChange={onFieldChange}
+                    required
+                  />
+                </div>
               </div>
-              <div className="w-1/4 flex-col">
-                <label
-                  htmlFor="lastname"
-                  className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
-                >
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  id="lastname"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
-                  placeholder="Last Name"
-                  onChange={onFieldChange}
-                  required
-                />
-              </div>
-              <div className="w-1/2 flex-col">
+              <div className="lg:w-1/2 lg:flex-col">
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
+                  className="mb-2 block text-xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
                 >
                   Your Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="name@email.com"
                   onChange={onFieldChange}
                   required
@@ -201,14 +202,14 @@ export default function ContactForm() {
             <div>
               <label
                 htmlFor="subject"
-                className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
+                className="mb-2 block text-xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
               >
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                 placeholder="Let us know how we can help"
                 onChange={onFieldChange}
                 required
@@ -217,26 +218,28 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
-                className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-400 lg:text-sm"
+                className="mb-2 block text-xl font-medium text-gray-900 dark:text-gray-400 lg:text-sm"
               >
                 Your Message
               </label>
               <textarea
                 id="message"
                 rows={6}
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                 placeholder="Leave a comment..."
                 onChange={onFieldChange}
                 minLength={10}
                 required
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="rounded-lg bg-secondary-500 py-4 px-6 text-center text-3xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit lg:py-3 lg:text-sm"
-            >
-              Send message
-            </button>
+            <div className="flex justify-center lg:justify-start">
+              <button
+                type="submit"
+                className="rounded-lg bg-secondary-500 py-4 px-6 text-center text-xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit lg:py-3 lg:text-sm"
+              >
+                Send message
+              </button>
+            </div>
           </form>
           {sysMsg.statusCode > "0" ? <SystemMessage sysMsg={sysMsg} /> : null}
         </div>

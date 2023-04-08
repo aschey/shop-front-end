@@ -52,24 +52,24 @@ export function Home() {
   return (
     <>
       {/* ------------------- HERO SECTION  ----------------*/}
-      <section className="hero bg-primary-400 pt-48 pb-28 dark:bg-gray-900 lg:pt-16 lg:pb-2">
-        <div className="mx-auto grid max-w-screen-xl px-4 py-10 lg:grid-cols-12 lg:gap-12 lg:py-16 xl:gap-4">
-          <div className="mr-auto w-full place-self-center px-28 text-center lg:col-span-5 lg:px-0 lg:text-start">
-            <h1 className="text-shadow-header mb-4 w-full text-8xl font-extrabold leading-none tracking-tight text-primary-100 dark:text-white lg:max-w-2xl lg:text-4xl xl:text-6xl">
+      <section className="hero bg-primary-400 py-20 dark:bg-gray-900 lg:pt-16 lg:pb-2">
+        <div className="mx-auto grid px-8 py-10 lg:max-w-screen-xl lg:grid-cols-12 lg:gap-12 lg:py-16 xl:gap-4">
+          <div className="mr-auto w-full place-self-center px-4 lg:col-span-5 lg:px-0 lg:text-start">
+            <h1 className="text-shadow-header mb-4 w-full text-5xl font-extrabold leading-none tracking-tight text-primary-100 dark:text-white lg:max-w-2xl lg:text-4xl xl:text-6xl">
               MasterChef Georgi
             </h1>
-            <p className="mb-6 mt-12 text-4xl font-light text-white dark:text-gray-400 lg:mt-1 lg:mb-8 lg:max-w-2xl lg:text-xl">
+            <p className="mb-6 mt-4 text-xl font-light text-white dark:text-gray-400 lg:mt-1 lg:mb-8 lg:max-w-2xl lg:text-xl">
               Explore the rich flavors of Bulgarian cuisine and bring a taste of
               Bulgaria to your home!
             </p>
             <div className="mt-20 flex w-full flex-col gap-10 lg:mt-1 lg:flex-row lg:gap-5">
               <Link to="/shop">
-                <button className="button-shake inline-flex w-full items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-3xl font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 lg:h-auto lg:w-1/4 lg:min-w-[120px] lg:text-lg">
+                <button className="button-shake inline-flex w-full items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-2xl font-bold text-white shadow-md hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 lg:h-auto lg:w-1/4 lg:min-w-[120px] lg:text-lg">
                   Shop
                   <svg
-                    className="ml-4 -mr-1 h-14 lg:ml-0 lg:h-5 lg:w-14"
+                    className="ml-4 h-8 lg:ml-0 lg:h-5 lg:w-14"
                     fill="currentColor"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 16 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -82,7 +82,7 @@ export function Home() {
               </Link>
               <Link
                 to="/about-bulgaria"
-                className="btn-whats-bulgarian-cuisine inline-flex min-w-[150px] items-center justify-center rounded-lg border border-gray-300 px-5 py-6 text-center text-3xl font-medium text-gray-900 hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700  dark:focus:ring-gray-800 lg:w-3/4 lg:py-3 lg:text-base"
+                className="btn-whats-bulgarian-cuisine inline-flex min-w-[150px] items-center justify-center rounded-lg border border-gray-300 px-5 py-3.5 text-center text-2xl font-medium text-gray-900 shadow-md hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700  dark:focus:ring-gray-800 lg:w-3/4 lg:py-3 lg:text-base"
               >
                 What Is Bulgarian Cuisine?
               </Link>
@@ -121,14 +121,14 @@ export function Home() {
       <section className="bg-secondary-50 dark:bg-gray-900">
         <div className="mx-auto max-w-screen-xl px-8 py-16 lg:px-6">
           <div className="mx-auto my-8 mb-8 max-w-screen-sm text-center lg:mt-2 lg:mb-16">
-            <h2 className="mb-4 text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
+            <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
               Most Popular
             </h2>
-            <p className="text-3xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-lg">
+            <p className="text-2xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-lg">
               Tastiest Bulgarian Delights That We Love
             </p>
           </div>
-          <div className="mx-auto grid max-w-screen-md gap-5 lg:mb-10 lg:max-w-screen-xl ">
+          <div className="mx-auto grid gap-5 lg:mb-10 lg:max-w-screen-xl ">
             {/* ---------------Popular Individual Item START------------*/}
             {products.length === 0 ? (
               // <div className="flex flex-col gap-2">
@@ -220,16 +220,16 @@ export function Home() {
               />
             </svg>
             <blockquote>
-              <p className="text-3xl font-medium text-gray-600 dark:text-white lg:text-2xl">
+              <p className="mx-14 text-xl font-medium text-gray-600 dark:text-white lg:px-0 lg:text-2xl">
                 {testimonials[currentTestimonialIndex].quote}
               </p>
             </blockquote>
             <figcaption className="mt-6 flex items-center justify-center space-x-3">
               <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div className="pr-3 text-2xl font-medium text-gray-900 dark:text-white lg:text-lg">
+                <div className="pr-3 text-lg font-medium text-gray-900 dark:text-white lg:text-lg">
                   {testimonials[currentTestimonialIndex].author}
                 </div>
-                <div className="lg:text-md pl-3 text-lg font-light text-gray-500 dark:text-gray-400">
+                <div className="lg:text-md text-md pl-3 font-light text-gray-500 dark:text-gray-400">
                   {testimonials[currentTestimonialIndex].location}
                 </div>
               </div>
