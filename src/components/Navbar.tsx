@@ -93,13 +93,7 @@ export default function Navbar() {
             </span>
           </a>
           <div className="flex items-center lg:order-2">
-            {/* <a
-              href="#"
-              className="mr-2 rounded-lg px-4 py-2 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800 lg:px-5 lg:py-2.5"
-            >
-              Log in
-            </a> */}
-            {/* ---------------Shopping Cart Button START------------*/}
+            {/* ---------------Shopping Cart Button START------------ */}
             <>
               <Link
                 to="/cart"
@@ -136,7 +130,7 @@ export default function Navbar() {
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="ml-1 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
+              className="ml-1 inline-flex items-center rounded-lg p-2 py-4 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
@@ -179,8 +173,8 @@ export default function Navbar() {
                       <button
                         className={
                           anchorClicked
-                            ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-3xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
-                            : "block border-b border-gray-100 py-2 text-3xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                            ? "block rounded bg-primary-700 py-4 pr-4 pl-3 text-4xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                            : "block border-b border-gray-100 py-4 pl-3 text-4xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                         }
                         onClick={scrollToAnchor}
                       >
@@ -190,8 +184,8 @@ export default function Navbar() {
                       <button
                         className={
                           anchorClicked
-                            ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-3xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
-                            : "block border-b border-gray-100 py-2 pr-4 pl-3 text-3xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                            ? "block rounded bg-primary-700 py-4 pr-4 pl-3 text-4xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                            : "block border-b border-gray-100 py-4 pl-3 text-4xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                         }
                         onClick={goToHomeAndScroll}
                       >
@@ -205,8 +199,8 @@ export default function Navbar() {
                       to={item.to}
                       className={
                         item.current
-                          ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-3xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
-                          : "block border-b border-gray-100 py-2 pr-4 pl-3 text-3xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                          ? "block rounded bg-primary-700 py-4 pr-4 pl-3 text-4xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                          : "block border-b border-gray-100 py-4 pl-3 text-4xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                       }
                       aria-current={item.current ? "page" : undefined}
                     >

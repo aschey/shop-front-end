@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
           <div className="my-10 grid grid-cols-2 gap-8 sm:grid-cols-2 sm:gap-6 lg:mt-0">
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-secondary-200 dark:text-white">
+              <h2 className="lg:text-md mb-6 text-lg font-semibold uppercase text-secondary-200 dark:text-white">
                 Follow us
               </h2>
               <ul className="text-secondary-200 dark:text-gray-400">
@@ -34,7 +34,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-secondary-200 dark:text-white">
+              <h2 className="lg:text-md mb-6 text-lg font-semibold uppercase text-secondary-200 dark:text-white">
                 Legal
               </h2>
               <ul className="text-secondary-200 dark:text-gray-400">
