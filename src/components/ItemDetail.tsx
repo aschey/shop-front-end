@@ -63,8 +63,8 @@ export default function ItemDetail({
           alt={itemName}
         />
 
-        <div className="align-items absolute inset-0 h-full px-5 py-3 text-center text-xl text-white transition-opacity duration-300 sm:bg-transparent md:flex md:bg-black md:opacity-0 hover:md:opacity-60">
-          <p className="hidden self-center italic md:block">
+        <div className="align-items collapse absolute inset-0 h-full px-5 py-3 text-center text-xl text-white transition-opacity duration-300 sm:bg-transparent md:flex md:bg-black md:opacity-0 hover:md:opacity-60 lg:visible">
+          <p className="collapse self-center italic md:block lg:visible">
             {itemDescription}
           </p>
         </div>

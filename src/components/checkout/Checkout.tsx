@@ -31,13 +31,16 @@ const Checkout = () => {
       );
 
       bodyContent = (
-        <div className="flex flex-col items-center py-10">
+        <div className="flex flex-col items-center py-10 text-xl">
           <p>
             Your order is being prepared and will be shipped as soon as
             possible!
           </p>
           <p>Be on the lookout for a confirmation email for your purchase</p>
-          <Link to="/shop" className="rounded-md px-3 py-2 text-lg font-medium">
+          <Link
+            to="/shop"
+            className="rounded-md py-10 px-3 text-4xl font-medium hover:text-secondary-700 lg:text-2xl"
+          >
             Click Here to Continue Shopping
           </Link>
         </div>
@@ -52,9 +55,12 @@ const Checkout = () => {
         </>
       );
       bodyContent = (
-        <div className="flex flex-col items-center">
-          <p>Click below to return to cart</p>
-          <Link to="/cart" className="rounded-md px-3 py-2 text-lg font-medium">
+        <div className="rounded-md py-10 px-3 text-center">
+          <p className="text-3xl lg:text-lg">Click below to return to cart</p>
+          <Link
+            to="/cart"
+            className="rounded-md py-10 px-3 text-4xl font-medium hover:text-secondary-700 lg:text-2xl"
+          >
             Go To Cart 🛒
           </Link>
         </div>
@@ -74,7 +80,7 @@ const Checkout = () => {
         </div>
       </section>
       <section className="w-full bg-secondary-50 dark:bg-gray-900">
-        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-xl justify-center p-4 lg:p-6">
+        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-md  justify-center p-4 lg:max-w-screen-xl lg:p-6">
           {bodyContent}
         </div>
       </section>

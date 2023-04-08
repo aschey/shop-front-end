@@ -85,7 +85,7 @@ export default function Navbar() {
       <nav className="fixed z-50 w-full border-gray-200 bg-white px-4 py-8 dark:bg-gray-800 lg:py-3 lg:px-6">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
           <a href="/" className="flex md:min-w-[200px] lg:items-center">
-            <p className="text-shadow-header relative bottom-2 mr-3 h-9 text-6xl lg:text-4xl">
+            <p className="text-shadow-header relative bottom-2 mr-3 h-9 text-6xl lg:static lg:text-4xl">
               🇧🇬
             </p>
             <span className="text-shadow-header self-center whitespace-nowrap text-5xl font-semibold dark:text-white lg:text-2xl">

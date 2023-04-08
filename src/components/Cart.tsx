@@ -53,23 +53,25 @@ const Cart = () => {
           {cartItems.length === 0 && (
             <Link
               to="/shop"
-              className="rounded-md px-3 py-2 text-xl font-medium lg:text-lg"
+              className="rounded-md py-10 px-3 text-4xl font-medium hover:text-secondary-700 lg:text-2xl"
             >
               Click Here to Continue Shopping
             </Link>
           )}
           {cartItems.length > 0 && (
             <>
-              <table className="border-lg m-16 mx-auto w-11/12 table-fixed rounded-lg bg-white text-2xl lg:text-lg">
+              <table className="border-lg m-16 mx-auto w-full table-fixed rounded-lg bg-white text-2xl lg:text-lg">
                 <thead>
                   <tr>
-                    <th className="border-b-2 border-primary-800 py-4 font-bold">
+                    <th className="w-fit border-b-2 border-primary-800 py-4 font-bold">
                       Product Name
                     </th>
-                    <th className="border-b-2 border-primary-800 font-bold">
+                    <th className="w-fit border-b-2 border-primary-800 font-bold">
                       Price
                     </th>
-                    <th className="border-b-2 border-primary-800">Quantity</th>
+                    <th className="w-fit border-b-2 border-primary-800">
+                      Quantity
+                    </th>
                     <th className="w-fit border-b-2 border-primary-800">
                       Pre-tax Subtotal*
                     </th>
@@ -130,7 +132,7 @@ const Cart = () => {
               </table>
 
               <button
-                className=" button-shake flex min-w-[30vw] items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-2xl font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 sm:w-[80vw] md:w-[30vw] lg:text-base"
+                className="button-shake flex min-w-[30vw] items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-2xl font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 sm:w-[80vw] md:w-[30vw] lg:text-base"
                 onClick={handleCheckOutProcess}
               >
                 Check Out
