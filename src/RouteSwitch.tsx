@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
@@ -9,13 +8,14 @@ import ScrollToTopOnMount from "./utilities/scrolltop";
 import About from "./components/About";
 import Redirect from "./components/utility-components/redirect";
 import AboutBulgaria from "./components/AboutBulgaria";
+import NavbarComponent from "./components/Navbar";
 
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
       {/* ScrollToTopOnMount - upon clicking new page, will always start at top of page */}
       <ScrollToTopOnMount />
-      <Navbar />
+      <NavbarComponent />
 
       <Routes>
         <Route path="/*" element={<Redirect />} />

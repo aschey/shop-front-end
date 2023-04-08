@@ -7,10 +7,10 @@ export default function Footer() {
           <div className="mt-0 md:mb-0">
             <a
               href="#"
-              className="text-shadow-header flex items-center text-5xl lg:text-3xl"
+              className="text-shadow-header flex items-center text-3xl lg:text-3xl"
             >
               🇧🇬
-              <span className="text-shadow-header self-center whitespace-nowrap px-2 text-4xl font-semibold text-secondary-100 lg:text-2xl">
+              <span className="text-shadow-header self-center whitespace-nowrap px-2 text-2xl font-semibold text-secondary-100 lg:text-2xl">
                 MasterChef Georgi
               </span>
             </a>

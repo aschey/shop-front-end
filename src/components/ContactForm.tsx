@@ -159,7 +159,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   id="firstname"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="First Name"
                   onChange={onFieldChange}
                   required
@@ -175,7 +175,7 @@ export default function ContactForm() {
                 <input
                   type="text"
                   id="lastname"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="Last Name"
                   onChange={onFieldChange}
                   required
@@ -191,7 +191,7 @@ export default function ContactForm() {
                 <input
                   type="email"
                   id="email"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="name@email.com"
                   onChange={onFieldChange}
                   required
@@ -208,7 +208,7 @@ export default function ContactForm() {
               <input
                 type="text"
                 id="subject"
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                 placeholder="Let us know how we can help"
                 onChange={onFieldChange}
                 required
@@ -224,7 +224,7 @@ export default function ContactForm() {
               <textarea
                 id="message"
                 rows={6}
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-2xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                 placeholder="Leave a comment..."
                 onChange={onFieldChange}
                 minLength={10}

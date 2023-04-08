@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import CartContext from "../contexts/cart/CartContext";
 import "../index.css";
 import ItemDetail from "./ItemDetail";
 import ContactForm from "./ContactForm";
@@ -10,6 +9,7 @@ import {
   slideshowImages,
   testimonials,
 } from "../utilities/slideshowImages-Testimonials";
+import { Spinner } from "flowbite-react";
 
 export function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -119,8 +119,8 @@ export function Home() {
       </section>
       {/* ------------------- POPULAR MENU SECTION  ----------------*/}
       <section className="bg-secondary-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-screen-xl py-8 px-8 lg:py-16 lg:px-6 ">
-          <div className="mx-auto mt-8 mb-8 max-w-screen-sm text-center lg:mt-2 lg:mb-16">
+        <div className="mx-auto max-w-screen-xl px-8 py-16 lg:px-6">
+          <div className="mx-auto my-8 mb-8 max-w-screen-sm text-center lg:mt-2 lg:mb-16">
             <h2 className="mb-4 text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
               Most Popular
             </h2>
@@ -130,24 +130,36 @@ export function Home() {
           </div>
           <div className="mx-auto grid max-w-screen-md gap-5 lg:mb-10 lg:max-w-screen-xl ">
             {/* ---------------Popular Individual Item START------------*/}
-            <div className="grid w-full grid-cols-1 gap-16 pt-12 pb-12 lg:grid-cols-2 lg:pb-12">
-              {/* //shows first four products only */}
-              {products.slice(0, 4).map((product) => {
-                return (
-                  <div key={product.id}>
-                    <ItemDetail
-                      product={product}
-                      cardClass="lg:grid-cols-2 grid grid-cols-1"
-                      aTagClass={""}
-                      flexClass1={""}
-                      flexClass2={""}
-                      flexClass3={""}
-                      buttonDivClass={"left-1/2 lg:w-1/2"}
-                    />
-                  </div>
-                );
-              })}
-            </div>
+            {products.length === 0 ? (
+              // <div className="flex flex-col gap-2">
+              <div className="text-center">
+                <Spinner
+                  color="info"
+                  size="xl"
+                  aria-label="Product Spinner Loading"
+                  className="h-20 w-20"
+                />
+              </div>
+            ) : (
+              <div className="grid w-full grid-cols-1 gap-16 pt-12 pb-12 lg:grid-cols-2 lg:pb-12">
+                {/* //shows first four products only */}
+                {products.slice(0, 4).map((product) => {
+                  return (
+                    <div key={product.id}>
+                      <ItemDetail
+                        product={product}
+                        cardClass="lg:grid-cols-2 grid grid-cols-1"
+                        aTagClass={""}
+                        flexClass1={""}
+                        flexClass2={""}
+                        flexClass3={""}
+                        buttonDivClass={"left-1/2 lg:w-1/2"}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* ---------------Popular Individual Item End------------*/}

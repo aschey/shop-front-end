@@ -16,12 +16,12 @@ const Shop = () => {
   return (
     <>
       <section className="w-full bg-secondary-900 pt-48 pb-28 dark:bg-gray-900 lg:pt-14">
-        <div className="mx-auto max-w-screen-md py-10 px-4 sm:py-16 lg:max-w-screen-xl lg:px-6">
-          <div className="max-w-screen-md">
-            <h2 className="mb-4 text-6xl font-extrabold tracking-tight text-gray-200 dark:text-white lg:text-4xl">
+        <div className="mx-auto max-w-screen-sm py-10 px-4 sm:py-16 lg:max-w-screen-xl lg:px-6">
+          <div className="max-w-screen-sm">
+            <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-200 dark:text-white lg:text-4xl">
               Shop Bulgarian Bites
             </h2>
-            <p className="mb-8 text-3xl font-light text-secondary-200 dark:text-gray-400 lg:text-xl">
+            <p className="mb-8 text-xl font-light text-secondary-200 dark:text-gray-400 lg:text-xl">
               Explore the delicious and rich flavors of Bulgarian cuisine. Bring
               home authentic Bulgarian dishes today!
             </p>

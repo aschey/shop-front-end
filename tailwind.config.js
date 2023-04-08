@@ -1,7 +1,7 @@
 module.exports = {
   content: [
-    "index.html",
-    "./src/**/*.{js,jsx,ts,tsx,vue,html}",
+    // "index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
@@ -32,9 +32,9 @@ module.exports = {
           900: "#0b4e17",
         },
       },
-      screens: {
-        xs: "350px",
-      },
+      // screens: {
+      //   xs: "350px",
+      // },
     },
   },
   plugins: [require("@tailwindcss/forms"), require("flowbite/plugin")],
