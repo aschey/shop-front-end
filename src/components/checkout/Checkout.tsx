@@ -66,7 +66,7 @@ const Checkout = () => {
 
   return (
     <>
-      <section className="w-full bg-secondary-900 pt-16 dark:bg-gray-900">
+      <section className="w-full bg-secondary-900 pt-48 pb-28 dark:bg-gray-900 lg:pt-14">
         <div className="mx-auto max-w-screen-md py-8 px-4 sm:py-16 lg:px-6">
           <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-200 dark:text-white">
             {sysMsgHeader}

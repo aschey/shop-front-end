@@ -38,12 +38,12 @@ const Cart = () => {
   return (
     <>
       <section className="w-full bg-secondary-900 pt-48 pb-28 dark:bg-gray-900 lg:pt-14">
-        <div className="mx-auto max-w-screen-md py-8 px-4 sm:py-16 lg:px-6">
-          <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-200 dark:text-white">
+        <div className="mx-auto max-w-screen-md py-10 px-4 sm:py-16 lg:max-w-screen-xl lg:px-6">
+          <h2 className="mb-4 text-center text-6xl font-extrabold tracking-tight text-gray-200 dark:text-white lg:text-4xl">
             {cartItems.length === 0 ? (
               <p>Your Cart Is Empty 🛒</p>
             ) : (
-              "Your Cart"
+              <h1>Your Cart</h1>
             )}
           </h2>
         </div>
@@ -60,7 +60,7 @@ const Cart = () => {
           )}
           {cartItems.length > 0 && (
             <>
-              <table className="border-lg m-16 mx-auto w-11/12 table-fixed rounded-lg bg-white">
+              <table className="border-lg m-16 mx-auto w-11/12 table-fixed rounded-lg bg-white text-xl lg:text-lg">
                 <thead>
                   <tr>
                     <th className="border-b-2 border-primary-800 py-4 font-bold">
@@ -130,7 +130,7 @@ const Cart = () => {
               </table>
 
               <button
-                className=" button-shake flex min-w-[30vw] items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-base font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 sm:w-[80vw] md:w-[30vw]"
+                className=" button-shake flex min-w-[30vw] items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-2xl font-bold text-white hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 sm:w-[80vw] md:w-[30vw] lg:text-base"
                 onClick={handleCheckOutProcess}
               >
                 Check Out

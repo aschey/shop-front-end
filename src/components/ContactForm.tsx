@@ -144,7 +144,7 @@ export default function ContactForm() {
             </tbody>
           </table>
           <hr />
-          <p className="my-10 text-center text-3xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
+          <p className="my-10 text-center text-4xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
             Have Questions? Leave Us A Message!
           </p>
           <form onSubmit={onSubmit} id="contact-form" className="space-y-4">
@@ -152,14 +152,14 @@ export default function ContactForm() {
               <div className="w-1/4 flex-col">
                 <label
                   htmlFor="firstname"
-                  className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
+                  className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
                 >
                   First Name
                 </label>
                 <input
                   type="text"
                   id="firstname"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="First Name"
                   onChange={onFieldChange}
                   required
@@ -168,14 +168,14 @@ export default function ContactForm() {
               <div className="w-1/4 flex-col">
                 <label
                   htmlFor="lastname"
-                  className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
+                  className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
                 >
                   Last Name
                 </label>
                 <input
                   type="text"
                   id="lastname"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="Last Name"
                   onChange={onFieldChange}
                   required
@@ -184,14 +184,14 @@ export default function ContactForm() {
               <div className="w-1/2 flex-col">
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
+                  className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
                 >
-                  Your email
+                  Your Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                   placeholder="name@email.com"
                   onChange={onFieldChange}
                   required
@@ -201,14 +201,14 @@ export default function ContactForm() {
             <div>
               <label
                 htmlFor="subject"
-                className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
+                className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-300 lg:text-sm"
               >
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:shadow-sm-light dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                 placeholder="Let us know how we can help"
                 onChange={onFieldChange}
                 required
@@ -217,14 +217,14 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
-                className="mb-2 block text-lg font-medium text-gray-900 dark:text-gray-400 lg:text-sm"
+                className="mb-2 block text-2xl font-medium text-gray-900 dark:text-gray-400 lg:text-sm"
               >
-                Your message
+                Your Message
               </label>
               <textarea
                 id="message"
                 rows={6}
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-xl text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 lg:text-sm"
                 placeholder="Leave a comment..."
                 onChange={onFieldChange}
                 minLength={10}
