@@ -62,14 +62,14 @@ export function Home() {
               Explore the rich flavors of Bulgarian cuisine and bring a taste of
               Bulgaria to your home!
             </p>
-            <div className="mt-20 flex w-full flex-col gap-10 lg:mt-1 lg:flex-row lg:gap-5">
+            <div className="mt-20 flex w-full flex-col gap-6 lg:mt-1 lg:flex-row lg:gap-5">
               <Link to="/shop">
-                <button className="button-shake inline-flex w-full items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-2xl font-bold text-white shadow-md hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 lg:h-auto lg:w-1/4 lg:min-w-[120px] lg:text-lg">
-                  Shop
+                <button className="button-shake inline-flex w-full items-center justify-center rounded-lg bg-secondary-600 py-3 text-center text-xl font-bold text-white shadow-md hover:bg-secondary-400 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 md:min-w-[120px] lg:h-auto lg:text-lg">
+                  <p className="ml-4">Shop</p>
                   <svg
-                    className="ml-4 h-8 lg:ml-0 lg:h-5 lg:w-14"
+                    className="ml-4 h-8 lg:mr-0 lg:h-5 lg:w-14"
                     fill="currentColor"
-                    viewBox="0 0 16 20"
+                    viewBox="0 0 18 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -82,9 +82,9 @@ export function Home() {
               </Link>
               <Link
                 to="/about-bulgaria"
-                className="btn-whats-bulgarian-cuisine inline-flex min-w-[150px] items-center justify-center rounded-lg border border-gray-300 px-5 py-3.5 text-center text-2xl font-medium text-gray-900 shadow-md hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700  dark:focus:ring-gray-800 lg:w-3/4 lg:py-3 lg:text-base"
+                className="btn-whats-bulgarian-cuisine inline-flex min-w-[150px] items-center justify-center rounded-lg border border-gray-300 px-5 py-3.5 text-center text-xl font-medium text-gray-900 shadow-md hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700  dark:focus:ring-gray-800 lg:w-3/4 lg:py-3 lg:text-base"
               >
-                What Is Bulgarian Cuisine?
+                What is Bulgarian Cuisine?
               </Link>
             </div>
           </div>
@@ -168,7 +168,7 @@ export function Home() {
       </section>
       {/* ------------------- TESTIMONIAL SECTION  ----------------*/}
       <section className="bg-white dark:bg-gray-900">
-        <div className="relative mx-auto mt-28 h-96 max-w-screen-xl px-4 py-8 text-center lg:mt-0 lg:py-16 lg:px-6">
+        <div className="relative mx-auto mt-20 h-96 max-w-screen-xl px-4 py-8 text-center lg:mt-0 lg:py-16 lg:px-6">
           <div
             className="absolute left-0 top-1/2 -translate-y-1/2 transform cursor-pointer"
             onClick={handlePrevClick}

@@ -64,7 +64,8 @@ export default function ContactForm() {
             Contact Us
           </h2>
           <p className="mt-8 mb-12 text-center text-xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
-            Why not add some Bulgarian flair to your next party or special
+            Why not add some Bulgarian flair to your next party or{" "}
+            <strong className="font-bold">special </strong>
             event? We provide catering services that meet your need. Call us
             directly for a direct quote.
           </p>
@@ -73,7 +74,7 @@ export default function ContactForm() {
               <tr>
                 <th className="w-1/4 pt-4 text-secondary-900">
                   <div className="flex justify-center gap-2 text-lg">
-                    Call
+                    <p className="hidden md:inline">Call</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -92,7 +93,7 @@ export default function ContactForm() {
                 </th>
                 <th className="w-2/5 pt-4 text-secondary-900 lg:w-2/4">
                   <div className="flex justify-center gap-2 text-lg">
-                    Email
+                    <p className="hidden md:inline">Email</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -111,7 +112,7 @@ export default function ContactForm() {
                 </th>
                 <th className="w-1/4 pt-4 text-secondary-900">
                   <div className="flex justify-center gap-2 text-lg">
-                    Location
+                    <p className="hidden md:inline">Location</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -132,13 +133,13 @@ export default function ContactForm() {
             </thead>
             <tbody>
               <tr>
-                <td className="w-1/4 py-4 text-center text-lg">
+                <td className="text-md w-1/4 py-4 text-center">
                   +1 xxx-xxx-xxxx
                 </td>
-                <td className="w-2/4 text-center text-lg">
+                <td className="text-md w-2/4 text-center">
                   xyz@masterchef-georgi.com
                 </td>
-                <td className="w-1/4 text-center text-lg">Chicago, IL</td>
+                <td className="text-md w-1/4 text-center">Chicago, IL</td>
               </tr>
             </tbody>
           </table>
@@ -235,7 +236,7 @@ export default function ContactForm() {
             <div className="flex justify-center lg:justify-start">
               <button
                 type="submit"
-                className="rounded-lg bg-secondary-500 py-4 px-6 text-center text-xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit lg:py-3 lg:text-sm"
+                className="mt-4 rounded-lg bg-secondary-500 py-4 px-6 text-center text-xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit lg:mt-0 lg:py-3 lg:text-sm"
               >
                 Send message
               </button>
