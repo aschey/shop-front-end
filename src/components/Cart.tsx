@@ -49,7 +49,7 @@ const Cart = () => {
         </div>
       </section>
       <section className="w-full bg-secondary-50 text-gray-700 dark:bg-gray-800">
-        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-lg flex-col items-center p-4 lg:max-w-screen-xl lg:p-6">
+        <div className="container mx-auto flex h-auto min-h-[70vh] max-w-screen-md flex-col items-center p-4 lg:max-w-screen-xl lg:p-6">
           {cartItems.length === 0 && (
             <Link
               to="/shop"
