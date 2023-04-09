@@ -19,7 +19,7 @@ const AboutBulgaria = () => {
         className="w-full bg-secondary-50 px-8 dark:bg-gray-900"
         id="bio"
       >
-        <div className="container mx-auto grid h-auto min-h-[70vh] grid-cols-1 gap-5 p-4 lg:mb-10 lg:max-w-screen-xl lg:grid-cols-5 lg:p-6">
+        <div className="container mx-auto grid h-auto min-h-[70vh] grid-cols-1 gap-20 p-4 lg:mb-10 lg:max-w-screen-xl lg:grid-cols-5 lg:p-6">
           <div className="col-span-1 my-20 h-auto max-w-screen-xl text-lg text-gray-800 lg:col-span-3 lg:mt-0 lg:min-h-[70vh] lg:text-lg">
             <WhatIsBulgarianCuisine />
           </div>
