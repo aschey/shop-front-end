@@ -15,12 +15,12 @@
 
 - Front End:
 
-  -~~ Add loading spinners~~
-  -~~ Need more responsive design~~
+  - ~~Add loading spinners~~
+  - ~~Need more responsive design~~
 
 - Back End:
 
-  -~~ Create scheduled job to sync with MongoDB~~
+  - ~~Create scheduled job to sync with MongoDB~~
 
 - Other:
 
