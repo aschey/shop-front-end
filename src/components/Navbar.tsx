@@ -127,13 +127,6 @@ export default function NavbarComponent() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          {/* <Navbar.Link href="/navbars" active={true}>
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="/navbars">About</Navbar.Link>
-        <Navbar.Link href="/navbars">Services</Navbar.Link>
-        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-        <Navbar.Link href="/navbars">Contact</Navbar.Link> */}
           {navigation.map((item) =>
             item.name === "Contact" ? (
               <li key={item.name}>

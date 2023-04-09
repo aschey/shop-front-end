@@ -76,7 +76,7 @@ export function Home() {
   return (
     <>
       {/* ------------------- HERO SECTION  ----------------*/}
-      <section className="hero bg-primary-400 py-20 dark:bg-gray-900 lg:pt-16 lg:pb-2">
+      <section className="hero bg-primary-400 py-20 pt-10 dark:bg-gray-900 lg:pt-16 lg:pb-2">
         <div className="mx-auto grid px-8 py-10 lg:max-w-screen-xl lg:grid-cols-12 lg:gap-12 lg:py-16 xl:gap-4">
           <div className="mr-auto w-full place-self-center px-4 lg:col-span-5 lg:px-0 lg:text-start">
             <h1 className="text-shadow-header mb-4 w-full text-5xl font-extrabold leading-none tracking-tight text-primary-100 dark:text-white lg:max-w-2xl lg:text-4xl xl:text-6xl">

@@ -8,7 +8,7 @@ import {
 const About = () => {
   return (
     <>
-      <section className="w-full bg-secondary-900 py-10 dark:bg-gray-900 lg:pt-14">
+      <section className="w-full bg-secondary-900 py-10 pt-24 dark:bg-gray-900">
         <div className="mx-auto max-w-screen-sm py-10 px-8 sm:py-16 lg:max-w-screen-xl lg:px-6">
           <div className="max-w-screen-sm">
             <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-200 dark:text-white">
