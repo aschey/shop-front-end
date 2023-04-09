@@ -54,16 +54,12 @@ export function Home() {
   // the required distance between touchStart and touchEnd to be detected as a swipe
   const minSwipeDistance = 50;
 
-  const onTouchStart = (e: {
-    targetTouches: { clientX: React.SetStateAction<null> }[];
-  }) => {
+  const onTouchStart = (e: any) => {
     setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
     setTouchStart(e.targetTouches[0].clientX);
   };
 
-  const onTouchMove = (e: {
-    targetTouches: { clientX: React.SetStateAction<null> }[];
-  }) => setTouchEnd(e.targetTouches[0].clientX);
+  const onTouchMove = (e: any) => setTouchEnd(e.targetTouches[0].clientX);
 
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
