@@ -48,6 +48,34 @@ export function Home() {
       index === testimonials.length - 1 ? 0 : index + 1
     );
   };
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  // the required distance between touchStart and touchEnd to be detected as a swipe
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: {
+    targetTouches: { clientX: React.SetStateAction<null> }[];
+  }) => {
+    setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: {
+    targetTouches: { clientX: React.SetStateAction<null> }[];
+  }) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      handlePrevClick();
+    } else if (isRightSwipe) {
+      handleNextClick();
+    }
+  };
 
   return (
     <>
@@ -167,7 +195,12 @@ export function Home() {
         {/* </div> */}
       </section>
       {/* ------------------- TESTIMONIAL SECTION  ----------------*/}
-      <section className="bg-white dark:bg-gray-900">
+      <section
+        className="bg-white dark:bg-gray-900"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         <div className="relative mx-auto mt-20 h-96 max-w-screen-xl px-4 py-8 text-center lg:mt-0 lg:py-16 lg:px-6">
           <div
             className="absolute left-0 top-1/2 -translate-y-1/2 transform cursor-pointer"

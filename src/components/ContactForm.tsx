@@ -236,7 +236,7 @@ export default function ContactForm() {
             <div className="flex justify-center lg:justify-start">
               <button
                 type="submit"
-                className="mt-4 rounded-lg bg-secondary-500 py-4 px-6 text-center text-xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit lg:mt-0 lg:py-3 lg:text-sm"
+                className="mt-4 w-full rounded-lg bg-secondary-500 py-4 px-6 text-center text-xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 md:w-fit lg:mt-0 lg:py-3 lg:text-sm"
               >
                 Send message
               </button>
