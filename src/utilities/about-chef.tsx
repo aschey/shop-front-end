@@ -76,5 +76,6 @@ export const WhatIsBulgarianCuisine = () => {
 };
 
 export const aboutChefImage: string[] = [
-  "https://storage.cloud.google.com/bulgarian-website-images-363516/chef-image.jpg",
+  // "https://storage.cloud.google.com/bulgarian-website-images-363516/chef-image.jpg",
+  "https://storage.googleapis.com/bulgarian-website-images-363516/chef-image.jpg",
 ];
