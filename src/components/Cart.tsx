@@ -38,7 +38,7 @@ const Cart = () => {
   return (
     <>
       <section className="w-full bg-secondary-900 py-10 pt-28 dark:bg-gray-900">
-        <div className="mx-auto py-10 px-4 sm:py-16 lg:max-w-screen-xl lg:px-6">
+        <div className="mx-auto px-4 py-10 sm:py-16 lg:max-w-screen-xl lg:px-6">
           <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-200 dark:text-white lg:text-4xl">
             {cartItems.length === 0 ? (
               <p>Your Cart Is Empty 🛒</p>
@@ -140,7 +140,7 @@ const Cart = () => {
                 >
                   Check Out
                   <svg
-                    className="ml-2 -mr-1 h-5 w-5"
+                    className="-mr-1 ml-2 h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,6 @@ const Cart = () => {
                   </svg>
                 </button>
               </div>
-              {/* </Link> */}
             </>
           )}
         </div>

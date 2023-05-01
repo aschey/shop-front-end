@@ -32,9 +32,6 @@ module.exports = {
           900: "#0b4e17",
         },
       },
-      // screens: {
-      //   xs: "350px",
-      // },
     },
   },
   plugins: [require("@tailwindcss/forms"), require("flowbite/plugin")],

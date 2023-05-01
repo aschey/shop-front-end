@@ -7,8 +7,8 @@
   <br />
 - Back-end:
   - MongoDB for product info
-  - API1 (Nodemailer): API created with ExpressJs; Dockerized and Deployed via Cloud Run
-  - API2 (Stripe Checkout + Sync with MongoDB): API created with NestJs; Dockerized and Deployed via Cloud Run
+  - [API1 (Nodemailer)](https://github.com/w-amie/shop-backend-nodemailer): API created with ExpressJs; Dockerized and Deployed via Cloud Run
+  - [API2 (Stripe Checkout + Sync with MongoDB)](https://github.com/w-amie/shop-backend-mongo-stripe): API created with NestJs; Dockerized and Deployed via Cloud Run
     <br />
 
 **TODOs**

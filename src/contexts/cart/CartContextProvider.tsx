@@ -1,9 +1,8 @@
-import { useReducer, ReactNode } from "react";
+import { useReducer } from "react";
 import CartContext from "./CartContext";
 import CartReducer from "./CartReducer";
 import { sumItems } from "./CartReducer";
 import { CartItem } from "../../types/interface";
-import { CartState, CartAction } from "../../types/type";
 
 //Local Storage
 const storage = (() => {

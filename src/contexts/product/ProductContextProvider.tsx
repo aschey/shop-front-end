@@ -17,12 +17,6 @@ type ProductContextType = {
 export const ProductContext = createContext<ProductContextType>({
   products: [],
   addProduct: () => {},
-  // getProducts: () => {},
-  // products: [];
-  // addProduct: () => void;
-  // // deleteAllproductsByUser: () => {},
-  // // deleteIndividualProduct: () => {},
-  // getProducts: () => void;
 });
 
 export const useShopContext = () => useContext(ProductContext);
@@ -66,11 +60,6 @@ export const ProductContextProvider = ({
           imageId,
           price,
         }
-        // {
-        //   headers: {
-        //     Authorization: userIdToken,
-        //   },
-        // }
       );
     } catch (error) {
       console.log(error);
@@ -83,9 +72,6 @@ export const ProductContextProvider = ({
       value={{
         products,
         addProduct,
-        // deleteAllproductsByUser,
-        // deleteIndividualProduct,
-        // getProducts,
       }}
     >
       {children}

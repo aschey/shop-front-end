@@ -4,11 +4,11 @@ export function SystemMessage({ sysMsg }: { sysMsg: SysMsg }) {
   let colorClass;
   let shortSysMessage;
 
-  if (sysMsg.statusCode < 300) {
+  if ((sysMsg.statusCode as number) < 300) {
     colorClass =
       " bg-green-50 text-green-800 dark:bg-gray-800 dark:text-green-400";
     shortSysMessage = "Success! ";
-  } else if (sysMsg.statusCode >= 300) {
+  } else if ((sysMsg.statusCode as number) >= 300) {
     colorClass =
       " bg-yellow-50 text-yellow-800 dark:bg-gray-800 dark:text-yellow-400";
     shortSysMessage = "Error: ";

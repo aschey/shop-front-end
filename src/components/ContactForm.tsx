@@ -1,7 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { SystemMessage } from "./utility-components/system";
 import { SysMsg } from "../types/interface";
-import { Spinner } from "flowbite-react";
 
 export default function ContactForm() {
   const [state, setState] = useState({
@@ -59,11 +58,11 @@ export default function ContactForm() {
   return (
     <>
       <section className="bg-secondary-50 dark:bg-gray-900">
-        <div className="mx-auto mt-10 max-w-screen-md py-24 px-6 lg:mt-1 lg:py-16">
+        <div className="mx-auto mt-10 max-w-screen-md px-6 py-24 lg:mt-1 lg:py-16">
           <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
             Contact Us
           </h2>
-          <p className="mt-8 mb-12 text-center text-xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
+          <p className="mb-12 mt-8 text-center text-xl font-light text-gray-500 dark:text-gray-400 lg:mb-16 lg:text-xl">
             Why not add some Bulgarian flair to your next party or{" "}
             <strong className="font-bold">special </strong>
             event? We provide catering services that meet your need. Call us
@@ -236,7 +235,7 @@ export default function ContactForm() {
             <div className="flex justify-center lg:justify-start">
               <button
                 type="submit"
-                className="mt-4 w-full rounded-lg bg-secondary-500 py-4 px-6 text-center text-xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 md:w-fit lg:mt-0 lg:py-3 lg:text-sm"
+                className="mt-4 w-full rounded-lg bg-secondary-500 px-6 py-4 text-center text-xl font-medium text-white hover:bg-secondary-300 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 md:w-fit lg:mt-0 lg:py-3 lg:text-sm"
               >
                 Send message
               </button>

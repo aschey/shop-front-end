@@ -18,7 +18,6 @@ const navigation: NavItem[] = [
 ];
 
 export default function NavbarComponent() {
-  //   const { user, setUser, newDisplayName } = useContext(UserContext);
   const [nav, setNav] = useState(navigation);
   const navigate = useNavigate();
   const { itemCount } = useContext(CartContext);
@@ -76,7 +75,7 @@ export default function NavbarComponent() {
 
   return (
     <header>
-      <Navbar fluid={true} rounded={true} className="fixed z-50 w-full">
+      <Navbar fluid={true} rounded={true} className="fixed top-0 z-50 w-full">
         <Navbar.Brand
           href="/"
           className="flex md:min-w-[200px] lg:items-center"
@@ -112,7 +111,7 @@ export default function NavbarComponent() {
               </svg>
               {itemCount ? (
                 <>
-                  <span className="absolute right-[-6px] bottom-[-6px] flex h-6 w-6 lg:bottom-[-5px] lg:right-[-5px] lg:h-5 lg:w-5">
+                  <span className="absolute bottom-[-6px] right-[-6px] flex h-6 w-6 lg:bottom-[-5px] lg:right-[-5px] lg:h-5 lg:w-5">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary-300 opacity-75"></span>
                     <span className="relative inline-flex h-6 w-6 items-center justify-center rounded-full bg-secondary-300 text-xl text-white lg:h-5 lg:w-5 lg:text-xs">
                       {itemCount}
@@ -134,7 +133,7 @@ export default function NavbarComponent() {
                   <button
                     className={
                       anchorClicked
-                        ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                        ? "block rounded bg-primary-700 py-2 pl-3 pr-4 text-xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
                         : "block border-b border-gray-100 py-2 pl-3 text-xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                     }
                     onClick={scrollToAnchor}
@@ -145,7 +144,7 @@ export default function NavbarComponent() {
                   <button
                     className={
                       anchorClicked
-                        ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                        ? "block rounded bg-primary-700 py-2 pl-3 pr-4 text-xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
                         : "block border-b border-gray-100 py-2 pl-3 text-xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                     }
                     onClick={goToHomeAndScroll}
@@ -160,7 +159,7 @@ export default function NavbarComponent() {
                   to={item.to}
                   className={
                     item.current
-                      ? "block rounded bg-primary-700 py-2 pr-4 pl-3 text-xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
+                      ? "block rounded bg-primary-700 py-2 pl-3 pr-4 text-xl text-white dark:text-white lg:bg-transparent lg:p-0 lg:text-xl lg:text-primary-700"
                       : "block border-b border-gray-100 py-2 pl-3 text-xl text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:text-xl lg:hover:bg-transparent lg:hover:text-primary-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                   }
                   aria-current={item.current ? "page" : undefined}

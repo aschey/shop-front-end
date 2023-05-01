@@ -14,7 +14,7 @@ import { Spinner } from "flowbite-react";
 export function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-  const { products, addProduct } = useContext(ProductContext);
+  const { products } = useContext(ProductContext);
 
   const Element = Scroll.Element;
 
@@ -76,13 +76,13 @@ export function Home() {
   return (
     <>
       {/* ------------------- HERO SECTION  ----------------*/}
-      <section className="hero bg-primary-400 py-20 pt-24 dark:bg-gray-900 lg:pt-16 lg:pb-2">
+      <section className="hero bg-primary-400 py-20 pt-24 dark:bg-gray-900 lg:pb-2 lg:pt-16">
         <div className="mx-auto grid px-8 py-10 lg:max-w-screen-xl lg:grid-cols-12 lg:gap-12 lg:py-16 xl:gap-4">
           <div className="mr-auto w-full place-self-center px-4 lg:col-span-5 lg:px-0 lg:text-start">
             <h1 className="text-shadow-header mb-4 w-full text-5xl font-extrabold leading-none tracking-tight text-primary-100 dark:text-white lg:max-w-2xl lg:text-4xl xl:text-6xl">
               MasterChef Georgi
             </h1>
-            <p className="mb-6 mt-4 text-xl font-light text-white dark:text-gray-400 lg:mt-1 lg:mb-8 lg:max-w-2xl lg:text-xl">
+            <p className="mb-6 mt-4 text-xl font-light text-white dark:text-gray-400 lg:mb-8 lg:mt-1 lg:max-w-2xl lg:text-xl">
               Explore the rich flavors of Bulgarian cuisine and bring a taste of
               Bulgaria to your home!
             </p>
@@ -120,7 +120,7 @@ export function Home() {
                   key={imageUrl}
                   src={imageUrl}
                   alt={`slide-${index}`}
-                  className={`absolute top-0 left-0 h-full w-full rounded-lg transition-opacity duration-1000 ${
+                  className={`absolute left-0 top-0 h-full w-full rounded-lg transition-opacity duration-1000 ${
                     index === currentSlide ? "opacity-100" : "opacity-0"
                   }`}
                 />
@@ -144,7 +144,7 @@ export function Home() {
       {/* ------------------- POPULAR MENU SECTION  ----------------*/}
       <section className="bg-secondary-50 dark:bg-gray-900">
         <div className="mx-auto max-w-screen-xl px-8 py-16 lg:px-6">
-          <div className="mx-auto my-8 mb-8 max-w-screen-sm text-center lg:mt-2 lg:mb-16">
+          <div className="mx-auto my-8 mb-8 max-w-screen-sm text-center lg:mb-16 lg:mt-2">
             <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
               Most Popular
             </h2>
@@ -165,7 +165,7 @@ export function Home() {
                 />
               </div>
             ) : (
-              <div className="grid w-full grid-cols-1 gap-16 pt-12 pb-12 lg:grid-cols-2 lg:pb-12">
+              <div className="grid w-full grid-cols-1 gap-16 pb-12 pt-12 lg:grid-cols-2 lg:pb-12">
                 {/* //shows first four products only */}
                 {products.slice(0, 4).map((product) => {
                   return (
@@ -197,7 +197,7 @@ export function Home() {
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        <div className="relative mx-auto mt-20 h-96 max-w-screen-xl px-4 py-8 text-center lg:mt-0 lg:py-16 lg:px-6">
+        <div className="relative mx-auto mt-20 h-96 max-w-screen-xl px-4 py-8 text-center lg:mt-0 lg:px-6 lg:py-16">
           <div
             className="absolute left-0 top-1/2 -translate-y-1/2 transform cursor-pointer"
             onClick={handlePrevClick}

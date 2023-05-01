@@ -8,7 +8,6 @@ import {
 } from "./CartTypes.js";
 import { CartItem } from "../../types/interface";
 import { CartState, CartAction } from "../../types/type";
-import axios from "axios";
 
 const Storage = (cartItems: CartItem[]) => {
   localStorage.setItem(
@@ -27,11 +26,7 @@ export const sumItems = (cartItems: CartItem[]) => {
   return { itemCount, totalPrice };
 };
 
-// The reducer is listening for an action, which is the type that we defined in the CartTypes.js file
-
 const CartReducer: React.Reducer<CartState, CartAction> = (state, action) => {
-  // The switch statement is checking the type of action that is being passed in
-
   let cartItems = [...state.cartItems];
   let itemIndex;
 
@@ -56,7 +51,6 @@ const CartReducer: React.Reducer<CartState, CartAction> = (state, action) => {
         checkout: false,
       };
 
-    // If the action type is REMOVE_ITEM, we want to remove the item from the cartItems array
     case REMOVE_ITEM:
       return {
         ...state,
@@ -95,18 +89,18 @@ const CartReducer: React.Reducer<CartState, CartAction> = (state, action) => {
         cartItems[itemIndex] = {
           ...cartItems[itemIndex],
           qty: cartItems[itemIndex].qty - 1,
-        }; //updated quantity
+        };
 
+        //remove item from cart if qty is reduced to 0
         if (cartItems[itemIndex].qty === 0) {
           console.log("cartItems[itemIndex].qty === 0");
           cartItems = cartItems.filter(
             (item: CartItem) => item.id !== action.payload.id
-          ); //remove item from cart if qty is reduced to 0
+          );
         }
       }
       return { ...state, cartItems, ...sumItems(cartItems) };
 
-    //If the action type is CLEAR, we want to clear the cartItems array
     case CLEAR:
       return {
         cartItems: [],
