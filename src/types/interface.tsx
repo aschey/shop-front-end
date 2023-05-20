@@ -1,10 +1,11 @@
 import { Dispatch, SetStateAction } from "react";
 
 export interface SearchProps {
-  inputField: string | null;
-  setInputField: Dispatch<SetStateAction<string>>;
+  handleSearch: (
+    inputItem: string | undefined,
+    filteredProducts: Product[]
+  ) => void;
   products: Product[];
-  setFilteredList: Dispatch<SetStateAction<Product[]>>;
 }
 
 export interface Product {

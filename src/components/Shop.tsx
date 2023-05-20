@@ -27,10 +27,11 @@ const Shop = () => {
             </p>
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
               <Search
-                inputField={inputField}
-                setInputField={setInputField}
+                handleSearch={(inputItem, filteredProducts) => {
+                  setInputField(inputItem ?? "");
+                  setFilteredList(filteredProducts);
+                }}
                 products={products}
-                setFilteredList={setFilteredList}
               />
             </div>
           </div>
